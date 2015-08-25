@@ -1,0 +1,356 @@
+
+*** These modified files were found in JOE when it aborted on Tue Aug 25 15:42:29 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+:q
+
+*** File '(Unnamed)'
+SPLTMP=ispell.tmp;cat >$SPLTMP;aspell --lang=en_US.utf-8 -x -c $SPLTMP </dev/tty >/dev/tty;tr -d <$SPLTMP '\012';/bin/rm $SPLTMP
+SPLTMP=ispell.tmp;cat >$SPLTMP;aspell --lang=en_US.utf-8 -x -c $SPLTMP </dev/tty >/dev/tty;cat $SPLTMP;/bin/rm $SPLTMP
+
+*** File '/media/marzampoglou/3TB/markzampoglou/ImageForensics/MATLAB Code/Recovery/.git/COMMIT_EDITMSG'
+q	d Please enter the commit message for your changes. Lines starting# with '#' will be ignored, and an empty message aborts the commit.
+# On bra
+,nch master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i:q!
+
+
+sfd
+
+
+
+
+
+
+ges to be committed:
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/ExtractMassSynthetic_Versions_6.m
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/ExtractMassSynthetic_Versions_challenge_2.m
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/ExtractMassSynthetic_Versions_challenge_rescale.m
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/Extract_Features.m
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/Extract_Features_JPEG.m
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/Extract_Features_NonJPEG.m
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/Extract_Features_old.m
+#	modified:   01 - Fast, automatic and fine-grained tampered JPEG image detection via DCT coefficient analysis/ToolboxExtract_5.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/EvaluateRW2.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/EvaluateRealWorld.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/EvaluateRealWorld_1.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/EvaluateSynthetic_1.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/EvaluateSynthetic_2.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/EvaluateTwitter_1.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/EvaluateTwitter_2.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/ExtractMassRealWorld_6.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/ExtractMassSynthetic_4.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/ExtractMassSynthetic_Versions_7.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/ExtractMassSynthetic_challenge.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/ExtractMassSynthetic_challenge_rescale.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/ToolboxExtract.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/ceil2.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/demo.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/floor2.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/getJmap.m
+#	modified:   02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/jpeg_rec.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/CFAloc.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/EMGaussianZM.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/EvalFileQuality.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/EvaluateRealWorld_3.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/EvaluateSynthetic_3.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/EvaluateTwitter_3.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ExtractMassRealWorld_8.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ExtractMassSynthetic_3.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ExtractMassSynthetic_Versions_8.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ExtractMassSynthetic_Versions_challenge_3.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ExtractMassSynthetic_Versions_challenge_rescale_1.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ExtractMassSynthetic_Versions_cont_1.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ExtractMassSynthetic_tmp.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/MoGEstimationZM.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ReExtractMissing.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/ToolboxExtract_1.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/demo.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/gaussian_window.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/getFeature.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/getMap.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/getVarianceMap.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/loglikelihood.m
+#	modified:   04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/prediction.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/EMperiod.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/EvaluateRealWorld_4.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/EvaluateRealWorld_5.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/EvaluateSynthetic_4.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/EvaluateSynthetic_5.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/EvaluateTwitter_4.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/EvaluateTwitter_5.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassRealWorld_10.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassRealWorld_9.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassSynthetic_5.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassSynthetic_6.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassSynthetic_Versions_9.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassSynthetic_Versions_b.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassSynthetic_Versions_challenge.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ExtractMassSynthetic_Versions_challenge_rescale_2.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/LLR.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ToolboxExtract_2.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/ceil2.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/demo.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/floor2.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/getJmapNA_EM.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/getJmap_EM.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/h1period.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/h1periodDQ.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/jpeg_rec.m
+#	modified:   05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/smooth_unshift.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/EvaluateSynthetic_6.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/EvaluateTwitter_6.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/ExtractMassRealWorld_11.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/ExtractMassSynthetic.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/ExtractMassSynthetic_Versions_10.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/GetNoiseMap.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/GetNoiseMap_old.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/ReExtractMissing_1.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/ReExtractMissing_2.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/ToolboxExtract_3.m
+#	modified:   07 - Using noise inconsistencies for blind image forensics/demo_3.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/CollectResults_RW_5.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/DemoGhost.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/ELA_orGhost.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/EvaluateRealWorld_6.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/EvaluateSynthetic_7.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/EvaluateTwitter_7.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/ExtractMassRealWorld_13.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/ExtractMassSynthetic_7.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/ExtractMassSynthetic_Versions_5.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/Ghost.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/Ghost_Y.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/MorphForGhost.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/RenameTIFFS.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/RenameTIFFS_1.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/ToolboxExtract_4.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/demo_2.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/eps2pdf.m
+#	modified:   08 - Exposing digital forgeries from JPEG ghosts/extrema.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/BSD_(revised)_license.txt
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/EasyBMP.cpp
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/EasyBMP_ChangeLog.txt
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/EasyBMPsample.cpp
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_1.06/sample/makefile
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/EasyBMP_UserManual.aux
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/EasyBMP_UserManual.log
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/EasyBMP_UserManual.tex
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/EasyBMP_UserManual.toc
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/makefile
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/EasyBMP_Documentation_1.06.00/rgb.tex
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg.sln
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Debug/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Debug/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Debug/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Debug/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Debug/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Debug/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/EasyBMP.cpp
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/FaridAlg.vcproj
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Release/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Release/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Release/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Release/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Release/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/Release/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/easybmp_variousbmputilities.h
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/faridAlg.cpp
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/FaridAlg/faridAlg.h
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/debug/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/debug/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/debug/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/debug/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/debug/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/debug/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/release/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/release/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/release/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/release/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/release/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Farid/FaridAlg/release/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/FaridImagesNames.txt
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/CVS/Entries
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/CVS/Entries.Extra
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/CVS/Entries.Extra.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/CVS/Entries.Old
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/CVS/Repository
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/CVS/Root
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/analyzeCroppedImage.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/analyzeLine.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/disFrmImgCntr.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/findAberrations_compact.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/medoutlierfilt.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/Thesis Algorithm/overlayContourOnImage.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/Author/Full_Code/imagesNames.txt
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/EvaluateRealWorld_8.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/ExtractMassRealWorld.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/ExtractMassSynthetic_10.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/ExtractMassSynthetic_Versions_1.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/ExtractMassSynthetic_cont_1.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/analyzeCroppedImage.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/analyzeLine.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/disFrmImgCntr.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/findAberrations.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/findAberrations_Mark.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/findAberrations_compact.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/medoutlierfilt.m
+#	modified:   09 - Digital image forgery detection based on lens and sensor aberration/overlayContourOnImage.m
+#	modified:   10 - Mine - Detecting digital image forgeries by measuring inconsistencies of blocking artifact/ExtractMassRealWorld_2.m
+#	modified:   10 - Mine - Detecting digital image forgeries by measuring inconsistencies of blocking artifact/ExtractMassSynthetic_13.m
+#	modified:   10 - Mine - Detecting digital image forgeries by measuring inconsistencies of blocking artifact/ExtractMassSynthetic_Versions_2.m
+#	modified:   10 - Mine - Detecting digital image forgeries by measuring inconsistencies of blocking artifact/demo_4.m
+#	modified:   10 - Mine - Detecting digital image forgeries by measuring inconsistencies of blocking artifact/extrema.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/ExtractMassRealWorld_5.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/ExtractMassSynthetic_1.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/ExtractMassSynthetic_Versions_12.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/ExtractMassSynthetic_Versions_4.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/ExtractMassSynthetic_Versions_cont.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/ExtractMassSynthetic_cont.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/Extract_Features_new.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/Extract_Features_old_1.m
+#	modified:   12 - Kurtosis - Exposing Region Splicing Forgeries with Blind Local Noise Estimation/KurtosisStatistics.m
+#	modified:   14 - Passive detection of doctored JPEG image via block artifact grid extraction/GetBlockGrid.m
+#	modified:   14 - Passive detection of doctored JPEG image via block artifact grid extraction/Mark.m
+#	modified:   14 - Passive detection of doctored JPEG image via block artifact grid extraction/Mid_Value.m
+#	modified:   14 - Passive detection of doctored JPEG image via block artifact grid extraction/W_Filter.m
+#	modified:   14 - Passive detection of doctored JPEG image via block artifact grid extraction/block.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/AntonB.m
+#	deleted:    16 - Image tamper detection based on demosaicing artifacts/Authors/Tamper detection v0.zip
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/CFATamperDetection_Both.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/CFATamperDetection_old.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/CFATamperDetection_second.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/DTWDenoise.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/ExtractMassRealWorld_1.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/ExtractMassRealWorld_4.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/ExtractMassSynthetic_9.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/ExtractMassSynthetic_FIllGaps.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/ExtractMassSynthetic_Versions.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/StrongEst.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/afb2D.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/afb2D_A.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/bilinInterp.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/cplxdual2D.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/cshift2D.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/denoising_dtdwt.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/dualfilt1.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/icplxdual2D.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/pm.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/sfb2D.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/sfb2D_A.m
+#	modified:   16 - Image tamper detection based on demosaicing artifacts/symextend.m
+#	modified:   ExtractMassSynthetic_1.m
+#	modified:   ExtractMassSynthetic_10.m
+#	modified:   ExtractMassSynthetic_11.m
+#	modified:   ExtractMassSynthetic_12.m
+#	modified:   ExtractMassSynthetic_13.m
+#	modified:   ExtractMassSynthetic_14.m
+#	modified:   ExtractMassSynthetic_2.m
+#	modified:   ExtractMassSynthetic_3.m
+#	modified:   ExtractMassSynthetic_4.m
+#	modified:   ExtractMassSynthetic_5.m
+#	modified:   ExtractMassSynthetic_6.m
+#	modified:   ExtractMassSynthetic_7.m
+#	modified:   ExtractMassSynthetic_8.m
+#	modified:   ExtractMassSynthetic_9.m
+#	modified:   NotForEvaluations/03 - NADetection/ExtractMassRealWorld_7.m
+#	modified:   NotForEvaluations/03 - NADetection/ExtractMassSynthetic_8.m
+#	modified:   NotForEvaluations/03 - NADetection/ExtractMassSynthetic_UsingMask.m
+#	modified:   NotForEvaluations/03 - NADetection/demo_8.m
+#	modified:   NotForEvaluations/03 - NADetection/detectNA.m
+#	modified:   NotForEvaluations/03 - NADetection/detectNA_UsingMask.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/README
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/bdct.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/bdctmtx.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/dequantize.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/ibdct.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/jpeg_qtable.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/jpeg_read.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/jpeg_rec.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/jpeg_write.m
+#	modified:   NotForEvaluations/JPEG_Toolbox_Piva/quantize.m
+#	modified:   NotForEvaluations/Multiple Compressions - Detecting double JPEG compression with the same quantization matrix/newForReader/ReEmbed.m
+#	modified:   NotForEvaluations/Multiple Compressions - Detecting double JPEG compression with the same quantization matrix/newForReader/main.m
+#	new file:   README.m
+#	new file:   README.md
+#	modified:   SLICSegmentation/ExtractMassSynthetic_11.m
+#	modified:   SLICSegmentation/ExtractMassSynthetic_cont_2.m
+#	modified:   SLICSegmentation/ExtractRealVIPPSLIC.m
+#	modified:   SLICSegmentation/rgb2lab.m
+#
+
+*** File '(Unnamed)'
+/media/marzampoglou/3TB/markzampoglou/ImageForensics/MATLAB Code/Recovery/.git/COMMIT_EDITMSG
+* Build Log *
+* Build Log *
+* Build Log *
+
+*** File '(Unnamed)'
+quit
+exit
+
+*** File '* Build Log *'

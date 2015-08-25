@@ -1,0 +1,1031 @@
+\documentclass[12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{color}
+\input{rgb}
+
+\oddsidemargin -0.5in
+\evensidemargin -0.5in
+\topmargin -0.5in
+\textwidth 7.5in
+\textheight 9in
+
+\newcommand{\EasyBMP}{\textbf{\texttt{{\color{DarkBlue}Easy}{\color{DarkRed}BMP}}}}
+\newcommand{\ExampleBox}[1]{\begin{center}\framebox{\parbox[t]{6in}{\underline{Example:}\\ \\ #1}}\end{center}}
+\newcommand{\PreviousVersion}{1.03}
+\newcommand{\Version}{1.06}
+
+\newcommand{\EmailAddress}{\texttt{macklin01@users.sourceforge.net}}
+\newcommand{\WebAddress}{\texttt{http://easybmp.sourceforge.net}}
+
+\begin{document}
+\pagestyle{fancyplain}
+% \markboth{}{\EasyBMP{} User Manual (Version \Version{})}
+\lhead[]{\EasyBMP{} User Manual}
+\rhead[]{Version \Version{}}
+\cfoot[\thepage]{Page \thepage}
+
+\title{\EasyBMP{} User Manual (Version \Version{})}
+\author{Paul Macklin\\
+\\
+\textbf{email:} \EmailAddress{}\\
+\textbf{WWW:} \WebAddress{}}
+\date{\today}
+\maketitle
+
+\abstract{We define and document a simple, easy-to-use, 
+cross-platform/cross-architecture Windows bitmap (BMP) library 
+written in C++.  The \EasyBMP{} library will work for 
+input and output on uncompressed 1, 
+4, 8, 16, 24, and 32 bpp (bits per pixel) Windows BMP files in just about 
+any operating system on just about any 32-bit or higher architecture. 
+\EasyBMP{} has been tested on both little-endian (Pentium 3, Pentium 4, 
+Celeron, Celeron M, Pentium M) and big-endian (Sun Sparc4) machines 
+in Linux, Solaris, and Windows on 32-bit and 64-bit CPU's. 
+Currently, GNU g++ (along with 
+variants and/or frontends such as MinGW and Bloodshed), Intel's compiler, 
+Borland's compiler, and Microsoft's MSVC++ compilers are 
+fully supported.\\
+
+\EasyBMP{} is open source software and is licensed under the 
+revised/modifed BSD license. Please see the \texttt{BSD\_(revised)\_license.txt} 
+file for further details. If you use this library in your application, it is the 
+author's request that you notify him.
+} 
+
+\tableofcontents
+
+\section{What's New in this Release (Version \Version{})}
+Several major changes have been made since Version \PreviousVersion{}, 
+including bugfixes, improved robustness, code cleanups, 
+and feature enhancements. 
+
+\subsection{Changes in Version 1.04}
+Version 1.04 focused on improving compatibility with the Borland 
+compiler. Very few warnings are generated when compiling; 
+those that remain can be safely ignored and point to quirks 
+of Borland rather than the code. \\
+
+This release also added some new functionality: the ability 
+to suppress all EasyBMP warning and error messages. This new 
+feature should be particularly useful for projects that have 
+no need for terminal output. 
+
+\subsection{Changes in Version 1.05}
+Version 1.05 improved compatibility by adding a copy constructor 
+for the BMP class. A new feature was also added: bilinear image 
+rescaling to a desired percentage, width, height, or square 
+box fit. 
+
+\subsection{Changes in Version 1.06}
+Version 1.06 fixed several minor bugs, particularly in the 
+copy constructor. (Thank you to ``redmaya'' in South Korea!) 
+The \texttt{cctype} and \texttt{cstring} includes were added 
+to improve compliance and compatibility. Lastly, 
+\texttt{GetPixel()} and \texttt{SetPixel()} functions were 
+added for future use, where we hope to be more careful with the 
+\texttt{const} keyword. \\
+
+\hrule\vskip 0.01in\hrule\vskip 0.25in
+
+For further information on the changes made in \EasyBMP{}, 
+please see the \texttt{EasyBMP\_ChangeLog.txt} file that is 
+included with every release. 
+
+\section{Introduction to the \EasyBMP{} Library}
+During my studies at the University of Minnesota 
+and the University of California, I needed a simple 
+method to create and modify images. Because the Windows BMP file format 
+is nearly universally readable, flexible, and simple, I decided to 
+work with this format. (No compression to worry about, potential 
+for 8 bits per color channel, etc.) \\
+
+There are many excellent open- and closed-source BMP 
+and image libraries available, and in no way do I claim that 
+anything here is even equal to those libraries. 
+However, as I looked about I noticed that quite a few
+existing libraries had one or more of the following properties:
+\begin{list}{$\bullet\hspace{.125in}$}{}
+\item
+too feature-rich (and accordingly more difficult to learn);
+\item
+required extensive installation;
+\item
+relied upon Linux or Windows libraries for simple functions;
+\item
+were too poorly documented for the novice programmer;
+\item
+required programming changes when moving code from one platform to another.
+\end{list}
+At that point, I decided to create my \EasyBMP{} library. 
+My goals included easy inclusion in C++ projects, ease of 
+use, no dependence upon other libraries 
+(totally self-contained), and cross-platform compatibility.
+
+\subsection{Sample Application: Converting a Color 
+Image to Grayscale}
+Here, we give a first sample application using the \EasyBMP{} library. 
+Notice that inclusion of the library is simple: we include 
+the \texttt{EasyBMP.h} file.  In this application, we see a simple 
+example of opening an existing BMP file, reading its RGB information, 
+and manipulating and writing that information to another BMP file. 
+The commands are pretty straightforward. This example should illustrate 
+how easy the library is for even the novice programmer.
+
+\begin{verbatim}
+#include "EasyBMP.h"
+using namespace std;
+
+int main( int argc, char* argv[] )
+{
+ if( argc != 3 )
+ {
+  cout << "Usage: ColorBMPtoGrayscale <input_filename> <output_filename>" 
+       << endl << endl;
+  return 1; 
+ }  
+
+ // declare and read the bitmap
+ BMP Input;
+ Input.ReadFromFile( argv[1] );
+
+ // convert each pixel to grayscale using RGB->YUV
+ for( int j=0 ; j < Input.TellHeight() ; j++)
+ {
+  for( int i=0 ; i < Input.TellWidth() ; i++)
+  {
+   int Temp = (int) floor( 0.299*Input(i,j)->Red + 
+                           0.587*Input(i,j)->Green + 
+                           0.114*Input(i,j)->Blue );
+   ebmpBYTE TempBYTE = (ebmpBYTE) Temp;
+   Input(i,j)->Red   = TempBYTE;
+   Input(i,j)->Green = TempBYTE;
+   Input(i,j)->Blue  = TempBYTE;
+  }
+ }
+ 
+ // Create a grayscale color table if necessary 
+ if( Input.TellBitDepth() < 16 )
+ { CreateGrayscaleColorTable( Input ); }
+
+ // write the output file
+ Input.WriteToFile( argv[2] );
+
+ return 0;
+}
+\end{verbatim}
+Additional code samples are available for download at \\
+
+\WebAddress{}
+
+\section{What's \EasyBMP{} Good for?}
+Lots of things! Okay, so we're a little biased. :-) \EasyBMP{} was first 
+used to easily load textures in a homebrew raytracer. Later on, however, 
+its focus shifted to being a simple, intuitive way to get image 
+data in and out of programs, particularly scientific applications. Some 
+sample application ideas include:
+\begin{enumerate}
+\item %1
+If you have a scientific computation that runs for hours, days, or weeks, 
+you could add a quick routine that outputs a snapshot of the simulation  
+after every time step. This would provide an easy way to check 
+the status of your long-running simulation without the overhead of 
+starting up Matlab, Tecplot, etc. With X-forwarding, you could even 
+check your simulation snapshot remotely over an SSH shell on free 
+WiFi at Panera! :-) 
+\item %2
+You could write a small program that generates animation frames from  
+your simulation data. Then, remotely start the program over a command 
+line shell, let it run on its own, and collect the results later. Again, no 
+overhead of Tecplot or Matlab, and no user interaction required! 
+(You could then combine the movie frames into an AVI animation using 
+EasyBMPtoAVI. See \texttt{http://easybmptoavi.sourceforge.net}.) 
+\item %3
+Import patient data (e.g., MRI imagery) into a 
+patient-tailored simulation or for medical analysis. 
+\item %4
+Create arbitrary starting shapes for level set methods 
+based on your own hand-drawn BMP files. This eliminates the 
+artificial restriction of only being able to simulate  
+shapes whose level set functions that can readily be described 
+with a formula. 
+\item %5
+Interface your science applications with imaging equipment. 
+\item %6
+Use \EasyBMP{} as a quick testbed for new image processing 
+ideas.
+\item %7
+Import snapshots from a webcam, compare them, and use \EasyBMP{} 
+to remotely detect changes in a room.
+\item %8
+Import textures for raytracing and OpenGL programs. 
+\item %9
+Save screenshots of OpenGL programs. Or an X program. Or ... 
+\item %10
+Create nice graphics for a system monitoring utility.
+\end{enumerate}
+
+\section{Installing and Using the \EasyBMP{} Library}
+Installing the \EasyBMP{} library is easy.  Simply copy all the 
+\texttt{*.h} and \texttt{*.cpp} files to the directory of your project.  
+Alternatively, copy all the header files anywhere in your compiler's path. You 
+should have the following files: 
+\begin{enumerate}
+% {$\bullet\hspace{.125in}$}{}
+\item \texttt{EasyBMP.h}
+\item \texttt{EasyBMP\_DataStructures.h}
+\item \texttt{EasyBMP\_BMP.h}
+\item \texttt{EasyBMP\_VariousBMPutilities.h}
+\item \texttt{EasyBMP.cpp}
+\end{enumerate}
+along with a code sample in the \texttt{sample} directory. \\
+
+To use the \EasyBMP{} library, simply include the 
+\texttt{EasyBMP.h} file via 
+\begin{center}
+\texttt{\#include "EasyBMP.h"}
+\end{center}
+Note that if you have copied all the \EasyBMP{} source files 
+to your compiler path, you may not need the quotes, but 
+rather brackets: 
+\begin{center}
+\texttt{\#include <EasyBMP.h>}
+\end{center}
+Compile your source code as you normally would along with the single 
+\texttt{EasyBMP.cpp} file; you don't have to 
+link to anything. For instance, to compile the code example above with 
+g++, use 
+\begin{center}
+\texttt{g++ -o ColorBMPtoGrayscale ColorBMPtoGrayscale.cpp EasyBMP.cpp}
+\end{center}
+
+A sample project with a makefile is included in the 
+\texttt{sample} directory. It demonstrates how to compile 
+\EasyBMP{} with a makefile. Please see the project website at 
+\texttt{http://easybmp.sourceforge.net} for further compiling 
+instructions, particularly for Microsoft Visual Studio and 
+makefile tutorials. 
+
+\section{A Few Words on the BMP file format}
+Any BMP file begins with a \emph{file header}, which contains 
+information on the file size and data location. The 
+file header is  followed by an \emph{info header}, which has information on the 
+dimensions and color depth of the file. All this information is 
+stored in the first 54 bytes of the file. \\
+
+After that, the data is stored. There are two basic 
+storage schemes for BMP files. If the bit depth is 8 or 
+less (256 colors or fewer), the colors are stored in a 
+table of (red,green,blue,alpha) values immediately after the 
+info header. In this \emph{indexed} format, each pixel 
+in the image refers to the position of a color in the color 
+table. In essence, this storage technique is 
+``painting by number.'' The benefit is that each pixel 
+requires little space, but each of the 256 colors can 
+attain the full range allowed on modern machines. (One of 
+$256^3$ colors with $256$ values of transparency.) \\
+
+The other scheme involves storing the red, green, and blue 
+data at every pixel, along with (possibly) the alpha value. 
+This format is very intuitive and allows for the full 
+range of colors for all pixels. However, the resulting files 
+are substantially larger than for 1, 4, and 8 bpp (bits per pixel)
+files. \\
+
+An intermediate storage scheme is to allocate two consecutive 
+bytes per every pixel (16 bpp bit depth). In this scheme, 5 bits are 
+allocated to red and blue, and 5 or 6 bits are allocated to green. 
+The green channel is given preference over the other channels 
+because the human eye is most sensitive to green, followed by 
+red and then blue; allocating the extra bit to green makes the 
+most rational use of the space when considering the human viewer.\\
+
+\EasyBMP{} internally converts all files to 32 bpp for 
+ease and consistency of handling. In particular, this makes it 
+easy to write add-on functions that work on all bit-depth files. 
+\EasyBMP{} converts back to the original bit depth when saving 
+the file. \\
+
+The coordinate system of a BMP file has its origin in the top left corner 
+of the image. The $(i,j)^{\textrm{th}}$ pixel is $i$ pixels from the left 
+and $j$ pixels from the top. \EasyBMP{} indexes pixels with the 
+same coordinate system. See Figure \ref{BitmapCoordinateSystem}. 
+
+% \begin{minipage}[c]{4in}
+\begin{figure}[!hbtf]
+% \framebox{
+\begin{center}
+\begin{picture}(200,155)(0,40)
+\put(10,50){\line(1,0){180}}
+\put(10,50){\makebox(0,-3)[t]{\texttt{(0,N-1)}}}
+\put(10,185){\line(1,0){180}}
+\put(10,185){\makebox(0,0)[b]{\texttt{(0,0)}}}
+
+\put(10,50){\line(0,1){135}}
+\put(190,185){\makebox(3,0)[b]{\texttt{(M-1,0)}}}
+\put(190,50){\line(0,1){135}}
+\put(190,50){\makebox(3,-3)[t]{\texttt{(M-1,N-1)}}}
+
+\put(75,50){\dashbox{5}(0,135)[b]{}}
+\put(75,186){\makebox(0,0)[b]{\texttt{i}}}
+\put(10,150){\dashbox{5}(180,0)[b]{}}
+\put(10,150){\makebox(0,0)[r]{\texttt{j}}}
+\put(75,150){\circle*{6}}
+\put(75,150){\makebox(0,-3)[tl]{\texttt{(i,j)}}}
+\end{picture}\\
+% }
+\begin{minipage}{0.75\linewidth}
+\caption{Coordinate system for an \texttt{M} $\times$ \texttt{N} BMP image. The 
+black circle indicates the $\texttt{(i,j)}^{\textrm{th}}$ pixel
+in the coordinate system.\label{BitmapCoordinateSystem}}
+\end{minipage}
+\end{center}
+\end{figure}
+% \end{minipage}
+
+
+\section{Basic Bitmap Operations}
+As of Version 0.55, \EasyBMP{} has a unified interface for all 
+bit depths. To initialize a new \texttt{BMP} object, simply 
+declare it:
+\ExampleBox{\texttt{// Declare a new bitmap object}\\
+\texttt{BMP AnImage;}}
+
+When you declare a \texttt{BMP} image, you will have a $ 1 \times 1$ 
+blank 24 bpp (bits per pixel) bitmap image. 
+Next, set the size and bit depth of the image. You can do 
+this either by reading an existing bitmap image or setting 
+this information manually, as below:
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{// Set size to 640 $\times$ 480}\\
+\texttt{AnImage.SetSize(640,480);}\\
+\texttt{// Set its color depth to 8-bits}\\
+\texttt{AnImage.SetBitDepth(8);}\\
+\texttt{// Declare another BMP image}\\
+\texttt{BMP AnotherImage;}\\
+\texttt{// Read from a file}\\
+\texttt{AnotherImage.ReadFromFile("sample.bmp");}
+}
+
+To check the bit depth, width, and height of a 
+\texttt{BMP} object, use:
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{AnImage.ReadFromFile("sample.bmp");}\\
+\texttt{cout << "File info:" << endl;}\\
+\texttt{cout << AnImage.TellWidth() << " x " << AnImage.TellHeight()}\\
+\texttt{\phantom{cout}  << " at " << AnImage.TellBitDepth() << " bpp" << endl;}
+}
+
+\EasyBMP{} also provides a simple routine to compute and display the 
+number of colors:
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{AnImage.ReadFromFile("sample.bmp");}\\
+\texttt{cout << "colors: " << AnImage.TellNumberOfColors() << endl;}}
+
+Note that for a 32 bpp file, we don't regard two colors that differ 
+only in the alpha channel as different colors; this function will 
+state that 32 bpp and 24 bpp files have the same number of colors. \\
+
+The bit depth and dimensions of a bitmap can be changed at any time:
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{AnImage.ReadFromFile("sample.bmp");}\\
+\texttt{\slash\slash{} Change the bit-depth}\\
+\texttt{AnImage.SetBitDepth(8);}\\
+\texttt{AnImage.SetBitDepth(24);}\\
+\texttt{\slash\slash{} Change the size}\\
+\texttt{AnImage.SetSize(1024,768);}
+}
+
+Note that whenever the bit depth is changed, any existing color table is 
+erased. Likewise, whenever the size is changed, all pixels are deleted. \\
+
+To access pixels, use \texttt{RGBApixel* operator()(int,int)}: 
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{AnImage.ReadFromFile("sample.bmp");}\\
+\texttt{// show the color of pixel (14,18)}\\
+\texttt{cout << "(" << (int) AnImage(14,18)->Red\phantom{ab} << "," }\\
+\texttt{\phantom{cout << "("} << (int) AnImage(14,18)->Green << "," }\\
+\texttt{\phantom{cout << "("} << (int) AnImage(14,18)->Blue\phantom{a} << "," }\\
+\texttt{\phantom{cout << "("} << (int) AnImage(14,18)->Alpha << ")" << endl; }\\
+\texttt{// Change this pixel to a blue-grayish color}\\
+\texttt{AnImage(14,18)->Red\phantom{ab} = 50; }\\
+\texttt{AnImage(14,18)->Green = 50; }\\
+\texttt{AnImage(14,18)->Blue\phantom{a} = 192; }\\
+\texttt{AnImage(14,18)->Alpha = 0; }
+}
+
+You can also access pixels using \texttt{RGBApixel GetPixel(int,int)} 
+and \texttt{bool SetPixel(int,int,RGBApixel)}:
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{AnImage.ReadFromFile("sample.bmp");}\\
+\texttt{// show the color of pixel (14,18)}\\
+\texttt{RGBApixel Temp = AnImage.GetPixel(14,18);}\\
+\texttt{cout << "(" << (int) Temp.Red\phantom{ab} << "," }\\
+\texttt{\phantom{cout << "("} << (int) Temp.Green << "," }\\
+\texttt{\phantom{cout << "("} << (int) Temp.Blue\phantom{a} << "," }\\
+\texttt{\phantom{cout << "("} << (int) Temp.Alpha << ")" << endl; }\\
+\texttt{// Change this pixel to a blue-grayish color}\\
+\texttt{Temp.Red = 50; Temp.Green = 50; Temp.Blue = 192; Temp.Alpha = 0;}\\
+\texttt{AnImage.SetPixel(14,18,Temp); }
+}
+
+Lastly, to save to a file, use \texttt{WriteToFile(char*)}:
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{AnImage.ReadFromFile("sample.bmp");}\\
+\texttt{AnImage.WriteToFile("copied.bmp");}
+}
+
+\section{Advanced Usage: Modifying the Color Table}
+\label{ColorTableSection}
+In \EasyBMP{}, the \texttt{BMP} class will automatically generate 
+a ``Windows standard'' color table whenever one is required (for 1, 4, 
+and 8 bpp files). However, it is possible to access and modify 
+individual colors in the color table. If you want to see what 
+the $n^{th}$ color in the color table and change another, use the following:
+\ExampleBox{\texttt{BMP SomeImage;}\\
+\texttt{// Set the bit depth to 8 bpp}\\
+\texttt{SomeImage.SetBitDepth(8);}\\
+\texttt{// Get the 40th color}\\
+\texttt{RGBApixel SomeColor = SomeImage.GetColor(40);}\\
+\texttt{// Display the color}\\
+\texttt{cout << (int) SomeColor.Red \phantom{ab}<< ","}\\
+\texttt{\phantom{cout} << (int) SomeColor.Green << ","}\\
+\texttt{\phantom{cout} << (int) SomeColor.Blue \phantom{a}<< ","}\\
+\texttt{\phantom{cout} << (int) SomeColor.Alpha << endl;}\\
+\texttt{// Change the 14th color to red}\\
+\texttt{RGBApixel NewColor;}\\
+\texttt{NewColor.Red\phantom{ab} = 255;}\\
+\texttt{NewColor.Green = 0;}\\
+\texttt{NewColor.Blue\phantom{a} = 0;}\\
+\texttt{NewColor.Alpha = 0;}\\
+\texttt{SomeImage.SetColor(14,NewColor);}
+}
+You can reset the color table to the ``Windows standard'' color table at any time:
+\ExampleBox{\texttt{BMP SomeImage;}\\
+\texttt{// Set the bit depth to 8 bpp}\\
+\texttt{SomeImage.SetBitDepth(8);}\\
+\texttt{// Change the 14th color to red}\\
+\texttt{RGBApixel NewColor;}\\
+\texttt{NewColor.Red\phantom{ab} = 255;}\\
+\texttt{NewColor.Green = 0;}\\
+\texttt{NewColor.Blue\phantom{a} = 0;}\\
+\texttt{NewColor.Alpha = 0;}\\
+\texttt{SomeImage.SetColor(14,NewColor);}\\
+\texttt{// Reset the color table}\\
+\texttt{SomeImage.CreateStandardColorTable();}
+}
+To maintain previously-provided functionality, \EasyBMP{} still 
+provides a grayscale color table generator:
+\ExampleBox{\texttt{BMP SomeImage;}\\
+\texttt{// Set the bit depth to 8 bpp}\\
+\texttt{SomeImage.SetBitDepth(8);}\\
+\texttt{// Create a grayscale color table}\\
+\texttt{CreateGrayscaleColorTable( SomeImage );}
+}
+Notice that in the example, the argument is a \texttt{BMP} object. \\
+
+If you want to modify a color table for a \texttt{BMP} file, you can 
+do so by using the \texttt{SetColor(int,RGBApixel)} member function. 
+To avoid messy error messages, any color table operation should do nothing 
+when applied to a 16, 24, or 32 bpp file. Consider this example: 
+
+\ExampleBox{\texttt{void CreateRedColorTable( BMP\& InputImage ) }\\
+\texttt{\{}\\
+\texttt{\phantom{a}int BitDepth = InputImage.TellBitDepth();}\\
+\texttt{\phantom{a}if( BitDepth != 1 \&\& BitDepth != 4 \&\& BitDepth != 8 )\{ return; \}}\\
+\texttt{\phantom{a}int NumberOfColors = IntPow(2,BitDepth); int i;}\\
+\texttt{\phantom{a}ebmpBYTE StepSize;}\\
+\texttt{\phantom{a}if( BitDepth != 1 )}\\
+\texttt{\phantom{a}\{ StepSize = 255/(NumberOfColors-1); \}}\\
+\texttt{\phantom{a}else}\\
+\texttt{\phantom{a}\{ StepSize = 255; \}}\\
+\texttt{\phantom{a}for( i=0 ; i < NumberOfColors ; i++)}\\
+\texttt{\phantom{a}\{}\\
+\texttt{\phantom{ab}RGBApixel Temp;} \\
+\texttt{\phantom{ab}Temp.Red\phantom{ab} = i*StepSize;}\\
+\texttt{\phantom{ab}Temp.Green = 0;}\\
+\texttt{\phantom{ab}Temp.Blue\phantom{a} = 0;}\\
+\texttt{\phantom{ab}Temp.Alpha = 0;}\\
+\texttt{\phantom{ab}InputImage.SetColor(i,Temp);}\\
+\texttt{\phantom{a}\}}\\
+\texttt{\}}
+}
+To call this new function, you would do this:
+\ExampleBox{\texttt{BMP RedImage;}\\
+\texttt{RedImage.ReadFromFile("sample.bmp");}\\
+\texttt{RedImage.SetBitDepth(8);}\\
+\texttt{CreateRedColorTable( RedImage );}
+}
+
+\section{Tools for Horizontal and Vertical Resolution}
+In some circumstances, it may be useful to specify the 
+horizontal and vertical resolution of the machine where a 
+bitmap image was generated. The \texttt{BMP} provides for 
+this possibility with the \texttt{biXPelsPerMeter} and 
+\texttt{biYPelsPerMeter} data members, although most files 
+simply set these to 0, indicating that the system default 
+should be used instead. \\
+
+\EasyBMP{} now supports setting these numbers via the 
+\texttt{SetDPI()} function:
+
+\ExampleBox{\texttt{BMP SomeImage};\\
+\texttt{SomeImage.ReadFromFile("sample.bmp");}\\
+\texttt{// Set horizontal resolution to 64 DPI and vertical to 32 DPI}\\
+\texttt{SomeImage.SetDPI(64,32);}}
+
+The default vertical and horizontal resolutions are 96 dpi, 
+and they are indicated by the globals
+\ExampleBox{\texttt{int DefaultXPelsPerMeter = 3780;}\\
+\texttt{int DefaultYPelsPerMeter = 3780;}}
+
+You can change the default behavior by setting these global  
+variables to your own preferred values. The conversion is 
+pretty simple:
+\begin{eqnarray*}
+\texttt{DefaultXPelsPerMeter} 
+& = &
+\left( \texttt{DesiredDefaultDPI} \textrm{ dots / inch}\right) \cdot 
+\left( \frac{1 \textrm{ inches}}{2.54 \textrm{ cm}} \right) \cdot 
+\left( \frac{100 \textrm{ cm}}{1 \textrm{ m}} \right) \\
+& = & 
+\frac{\texttt{DesiredDefaultDPI}}{0.0254} \textrm{ dots / meter}.
+\end{eqnarray*}
+The \texttt{DefaultYPelsPerMeter} can be changed similarly.
+
+\section{\EasyBMP{} and Warning Messages}
+You can turn the error and warning messages on or off in 
+\EasyBMP{}; this is most useful for applications where terminal 
+output is not desired. 
+
+\ExampleBox{\texttt{// turn the error messages off}\\
+\texttt{SetEasyBMPwarningsOff();}\\
+\\
+\texttt{// The following line would ordinarily give an out-of-range warning.}\\
+\texttt{SomeImage( SomeImage.TellWidth() , SomeImage.TellHeight() )->Red = 0; }\\
+\\
+\texttt{// turn the messages back off}\\
+\texttt{SetEasyBMPwarningsOn();} \\
+\\
+\texttt{// query the current message status}\\
+\texttt{cout << "EasyBMP warning status: " << GetEasyBMPwarningState() << endl;}
+}
+
+\section{\EasyBMP{} and Metadata}
+\EasyBMP{} currently supports reading \texttt{BMP} files with 
+metadata by skipping it; in particular, \EasyBMP{} does not 
+preserve or save metadata. In the future, \EasyBMP{} will 
+preserve metadata occurring before and after the pixel data, 
+as well as allow for the writing of additional metadata.
+
+\section{Extra Goodies: Various Bitmap Utilities}
+We have provided several sample utilities to make the 
+library more immediately useful.  We shall detail some of these 
+goodies here. :-). \\
+
+The first several utilities deal with getting file information 
+from existing files. 
+
+\begin{list}{$\bullet\hspace{.125in}$}{}
+\item 
+\underline{\texttt{void DisplayBitmapInfo( char* szFileNameIn )}:} This routine 
+displays the bitmap information from an existing bitmap. All information is 
+given. (width and height of image, bit depth, etc.) 
+
+\item 
+\underline{\texttt{BMFH GetBMFH( char* szFileNameIn )}:} This 
+returns a \texttt{BMFH} based on the file.  See Section 
+\ref{DataTypeSection} for more information on the data structure. 
+
+\item 
+\underline{\texttt{BMIH GetBMIH( char* szFileNameIn )}:} This 
+returns a \texttt{BMIH} based on the file.  See Section 
+\ref{DataTypeSection} for more information on the data structure. 
+
+\item 
+\underline{\texttt{int GetBitmapColorDepth( char* szFileNameIn )}:} This routine 
+returns the bit depth of the file. 
+\end{list}
+
+Other provided functions are ``cut `n' paste'' functions: they copy pixels from 
+one \texttt{BMP} object to another, with or without transparency. 
+
+\begin{list}{$\bullet\hspace{.125in}$}{}
+\item 
+\begin{verbatim}
+void PixelToPixelCopy( BMP& From, int FromX, int FromY,  
+                       BMP& To, int ToX, int ToY)
+\end{verbatim}
+
+This function copies the \texttt{(FromX,FromY)} pixel of the 
+\texttt{BMP} object \texttt{From} to pixel 
+\texttt{(ToX,ToY)} of the \texttt{BMP} object \texttt{To}. 
+
+\item 
+\begin{verbatim}
+void PixelToPixelCopyTransparent( BMP& From, int FromX, int FromY,  
+                                  BMP& To, int ToX, int ToY,
+                                  RGBApixel& Transparent )
+\end{verbatim}
+
+This function copies the \texttt{(FromX,FromY)} pixel of the 
+\texttt{BMP} object \texttt{From} to pixel 
+\texttt{(ToX,ToY)} of the \texttt{BMP} object \texttt{To}, and it 
+treats the input pixel as transparent if its color is 
+\texttt{Transparent}.  Here's an example: 
+
+\ExampleBox{\texttt{BMP Image1;}\\
+\texttt{BMP Image2;}\\
+\texttt{Image1.ReadFromFile("Blah.bmp");}\\
+\texttt{Image2.SetSize(10,10);}\\
+\texttt{RGBApixel TransparentColor;}\\
+\texttt{TransparentColor.Red = 255;}\\
+\texttt{TransparentColor.Green = 255;}\\
+\texttt{TransparentColor.Blue = 255;}\\
+\texttt{PixelToPixelCopyTransparent(Image1,3,5,Image2,0,0,TransparentColor);}}
+
+Note that the alpha channel is ignored when considering transparency.
+
+\item 
+\begin{verbatim}
+void RangedPixelToPixelCopy( BMP& From, int FromL , int FromR, int FromB, int FromT, 
+                             BMP& To, int ToX, int ToY )
+\end{verbatim}
+
+This function copies a range of pixels from one image to another. It copies 
+the rectangle \break \texttt{[FromL , FromR]} $\times$ \texttt{[FromB , FromT]}
+in image \texttt{From} to the rectangle whose top left corner is 
+\texttt{(ToX , ToY)} in image \texttt{To}. When using this function, don't forget 
+that the top left corner of the image is \texttt{(0,0)} in the coordinate system! 
+Also, \texttt{FromB} denotes the bottom edge of the rectangle, so 
+\texttt{FromB} $>$ \texttt{FromT}.  However, if the algorithm detects that you 
+accidentally reversed these numbers, it will automatically swap them for you.  Lastly, 
+if the rectangle you chose to copy from image \texttt{From} overlaps the boundary 
+of image \texttt{To}, it will truncate the the copy selection, rather than give a 
+nasty segmentation fault. :-) 
+
+\item 
+\begin{verbatim}
+void RangedPixelToPixelCopyTransparent( 
+     BMP& From, int FromL , int FromR, int FromB, int FromT, 
+     BMP& To, int ToX, int ToY ,
+     RGBApixel& Transparent )
+\end{verbatim}
+
+This function does the same thing as the previous function, but with 
+support for transparency.  As in the example for the pixel-to-pixel 
+copy above, you specify a transparent color of type \texttt{RGBApixel}. 
+
+\end{list}
+
+To maintain backward compatibility, we provide a function 
+to generate a grayscale color table.
+
+\begin{list}{$\bullet\hspace{.125in}$}{}
+\item
+\underline{\texttt{bool CreateGrayscaleColorTable( BMP\& InputImage ):}}
+This function creates a grayscale color table for any 1, 4, or 8 bpp 
+\texttt{BMP} object. It returns \texttt{true} when successful 
+and \texttt{false} otherwise. An example is given in Section 
+\ref{ColorTableSection}.
+\end{list}
+
+The last function rescales an image:
+
+\begin{list}{$\bullet\hspace{.125in}$}{}
+\item
+\begin{verbatim}
+bool Rescale( BMP& InputImage, char mode, int NewDimension );
+\end{verbatim}
+
+There are several different modes of operation available, 
+which are probably best explained by example. All scaling 
+is done by bilinear interpolation. Note that the 
+\texttt{mode} input is not case-sensitive.
+
+\ExampleBox{\texttt{BMP AnImage;}\\
+\texttt{AnImage.ReadFromFile("sample.bmp");}\\
+\texttt{// rescale to 42\% of original size }\\
+\texttt{Rescale( AnImage , 'p', 42 );}\\
+\\
+\texttt{// rescale (preserving aspect ratio) to width 100}\\
+\texttt{Rescale( AnImage , 'W', 100 );}\\
+\\
+\texttt{// rescale (preserving aspect ratio) to height 100}\\
+\texttt{Rescale( AnImage , 'H', 100 );}\\
+\\
+\texttt{// rescale (preserving aspect ratio) to fit in a 100 x 100 box}\\
+\texttt{Rescale( AnImage , 'f', 100 );}
+}
+\end{list}
+
+\section{Hidden Helper Functions}
+\EasyBMP{} has a few helper functions that are intended primarily 
+for internal use, but may also be helpful for your code. 
+
+\begin{list}{$\bullet\hspace{.125in}$}{}
+\item 
+\underline{\texttt{double Square( double number )}:} This routine 
+gives the square of the double \texttt{number}. It is much faster 
+than using the standard library \texttt{pow(double,2.0)}. 
+
+\item 
+\underline{\texttt{int IntSquare( int number )}:} This does 
+the same as the above, but with faster integer operations. 
+
+\item 
+\underline{\texttt{int IntPow( int base, int exponent )}:} Instead 
+of calling \texttt{pow(x,n)} where \texttt{x} and \texttt{n} are integers, 
+use this function. It's much faster. Beware against using 
+negative exponents, as they aren't supported. 
+\end{list}
+
+\section{Known Bugs and Quirks}
+%%%%% RESUME HERE %%%%%
+
+As of Version \Version{}, there is one known quirk: 
+there is no  
+\texttt{operator=} operator defined for the \texttt{BMP} class. This 
+means that you can't do code operations like this:
+\ExampleBox{\texttt{BMP Sample1;}\\
+\texttt{Sample1.ReadFromFile("sample1.bmp");}\\
+\texttt{BMP Sample2;}\\
+\texttt{Sample2.ReadFromFile("sample2.bmp");}\\
+\texttt{Sample1 = Sample2;}
+}
+
+AFAIK, the biggest implication of this is that you won't want to make 
+functions that return a \texttt{BMP} object. Instead, if you 
+want to modify a \texttt{BMP} object in a function, you should 
+pass it by reference to the function. An example of this 
+can be seen in the \texttt{CreateRedColorTable(BMP\&)} sample function 
+given in an earlier section. \\
+
+\texttt{operator=} functionality may be 
+added to \EasyBMP{} at a later date, but only if they do not 
+interfere with stability and robustness. \\
+
+The other ``quirk'' in \EasyBMP{} is that writing 8 bpp images 
+is very slow. This is a consequence of the fact that 8 bpp 
+images can be operated on just like 24 bpp images, and 
+so the write routine must search for the best fit color 
+for each pixel when saving. This may be improved in future 
+versions of \EasyBMP{}.
+
+\section{Future Changes}
+Future changes may include:
+\begin{enumerate}
+\item %3
+an optimal color table \texttt{GenerateOptimalColorTable()} generator function;
+\item %5
+eliminating the use of ceil and floor functions, as well 
+conversions from double to int wherever possible.
+\item 
+adding support for metadata before and after the pixel data
+\item 
+improving file write speeds for 8 bpp files. 
+\end{enumerate}
+
+\section{Obtaining Support for \EasyBMP{} or Contacting \EasyBMP{}}
+If you need support, have a feature request, or have other
+feedback on \EasyBMP{}, please open a new support tracker item 
+at \texttt{http://easybmp.sourceforge.net}. (See the ``support''
+link on that page.) If you also desire email support, you can 
+email Paul Macklin at \EmailAddress{} or indicate your email 
+address in your tracker item. However, please still 
+open a tracker item in such a case. \\
+
+Lastly, Paul would love to hear back from people 
+who have successfully used \EasyBMP{} in their own projects. 
+
+\appendix
+
+\section{Classes and BMP Data Types}
+\label{DataTypeSection}
+Here, we detail the various classes and data types and how to interface with them.  
+\subsection{Miscellany}
+Some of the data types that are used in the construction of more 
+complex data types are:
+\begin{center}
+\begin{tabular}{l | r}
+Type: & Info: \\
+\hline 
+\texttt{ebmpBYTE} & an unsigned character of 8 bits\\
+\texttt{ebmpWORD} & an unsigned short of 16 bits\\
+\texttt{ebmpDWORD} & an unsigned long of 32 bits\\
+\texttt{BMFH} & a specific header format for a BMP file\\
+\texttt{BMIH} & provides additional information on the BMP file
+\end{tabular}
+\end{center}
+For additional information on the \texttt{BMFH} and 
+\texttt{BMIH} classes, I highly recommend that 
+you visit \\
+
+\texttt{http://www.fortunecity.com/skyscraper/windows/364/bmpffrmt.html}.
+
+\subsection{RGBApixel}
+This data structure is exactly as their its suggests: a single pixel 
+of (red,green,blue,alpha) data. This data structure is used both 
+for individual pixels within an image and the color table in the 
+palette. Here are the details on the data structure:
+
+\begin{center}
+\begin{tabular}{l | r}
+Member: &  Function: \\
+\hline 
+\texttt{Blue} & blue pixel info of type \texttt{BYTE}\\
+\texttt{Green} & green pixel info of type \texttt{BYTE}\\
+\texttt{Red} & red pixel info of type \texttt{BYTE}\\
+\texttt{Alpha} & alpha pixel info of type \texttt{BYTE}
+\end{tabular}
+\end{center}
+
+\subsection{BMP}
+The \texttt{BMP} class consists of all the necessary pixel information 
+for a Windows bitmap file, along with file I/O routines. 
+\begin{list}{$\bullet\hspace{.125in}$}{}
+\item 
+\underline{\texttt{int BitDepth}:} This gives the number of bits per pixel, 
+i.e., the color depth. This data member is private and can only be 
+accessed through \texttt{TellBitDepth} and \texttt{SetBitDepth}.
+\item 
+\underline{\texttt{int Width}:} This gives the width of the 
+bitmap in pixels. This data member is private and can only be 
+accessed through \texttt{TellWidth} and \texttt{SetSize}.
+\item 
+\underline{\texttt{int Height}:} This gives the height of the 
+bitmap in pixels. This data member is private and can only be 
+accessed through \texttt{TellHeight} and \texttt{SetSize}.
+
+\item 
+\underline{\texttt{RGBApixel** Pixels}:} This is the actual 
+\texttt{Width} $\times$ \texttt{Height} array of \texttt{RGBApixel}'s. 
+This data member is private and can only be accessed through 
+\texttt{operator()}.
+
+\item 
+\underline{\texttt{RGBApixel* Colors}:} This is the table of colors, 
+stored as \texttt{RGBApixel}'s. If the \texttt{BMP} object is 
+24-bits or 32-bits, then \texttt{Colors = NULL}. This data member 
+is private and can only be accessed through \texttt{GetColor} 
+and \texttt{SetColor}.
+
+\item 
+\underline{\texttt{int XPelsPerMeter:}} This records the horizontal resolution in pixels per meter. This 
+private data member can only be accessed through 
+\texttt{SetDPI()}. This value defaults to 3780, i.e., 
+96 dpi.
+
+\item 
+\underline{\texttt{int YPelsPerMeter:}} This records the vertical resolution in pixels per meter. This 
+private data member can only be accessed through 
+\texttt{SetDPI()}. This value defaults to 3780, i.e., 
+96 dpi.
+
+\item 
+\underline{\texttt{BYTE* MetaData1:}}
+This is a placeholder for future metadata before the 
+pixel data. This data member is private. This is currently a 
+placeholder.
+
+\item 
+\underline{\texttt{int SizeOfMetaData1:}} This 
+private data member gives the size of 
+\texttt{MetaData1} in bytes. This is currently a 
+placeholder.
+
+\item 
+\underline{\texttt{BYTE* MetaData2:}}
+This is a placeholder for future metadata after the 
+pixel data. This data member is private. This is currently a 
+placeholder.
+
+\item 
+\underline{\texttt{int SizeOfMetaData2:}} This 
+private data member gives the size of 
+\texttt{MetaData2} in bytes. This is currently a 
+placeholder.
+
+\item 
+\underline{\texttt{void SetDPI( int HorizontalDPI, int VerticalDPI ):}} This function sets the 
+private data members \texttt{XPelsPerMeter} 
+and \texttt{YPelsPerMeter} such that the image 
+has horizontal and vertical resolutions 
+\texttt{HorizontalDPI} and 
+\texttt{VerticalDPI} dots per inch, respectively.
+
+
+\item 
+\underline{\texttt{int TellBitDepth( void )}:} This 
+function outputs the bit depth of the \texttt{BMP} object. 
+
+\item 
+\underline{\texttt{int TellWidth( void )}:} This 
+function outputs the width of the \texttt{BMP} object. 
+
+\item 
+\underline{\texttt{int TellHeight( void )}:} This 
+function outputs the height of the \texttt{BMP} object. 
+
+\item 
+\underline{\texttt{int TellNumberOfColors( void )}:} This 
+function outputs the number of colors of the \texttt{BMP} object. 
+
+\item 
+\underline{\texttt{BMP()}:} This constructor creates a 
+1 $\times$ 1, 24 bpp \texttt{BMP} object. 
+
+\item 
+\underline{\texttt{BMP( BMP\& Input ):}} This the copy constructor, 
+which is used when \texttt{BMP} objects are passed by value, 
+rather than reference.
+
+\item 
+\underline{\texttt{\~{}BMP()}:} This is the destructor. You should 
+never call this; it is automatically called when a \texttt{BMP} object 
+goes out of scope. 
+
+\item
+\underline{\texttt{RGBApixel GetPixel( int i, int j ) const:}} This 
+is used to get the contents of the \texttt{(i,j)} pixel while 
+respecting \texttt{const}, using a syntax similar to the 
+color table functions below. Primarily for future use. 
+
+\item 
+\underline{\texttt{bool SetPixel( int i, int j, RGBApixel NewPixel ):}} 
+This is used to set the contents of the \texttt{(i,j)} pixel 
+in a syntax similar to the color table functions below. Primarily for 
+future use. 
+
+\item 
+\underline{\texttt{RGBApixel* operator()(int i, int j)}:} This returns a 
+pointer to the (\texttt{i,j}) pixel. 
+\ExampleBox{\texttt{BMP Sample;}\\
+\texttt{Sample.SetSize(10,10);}\\
+\texttt{Sample(3,4)->Red = 255;}\\
+\texttt{Sample(3,4)->Alpha = 0;}\\
+\texttt{Sample(3,4)->Blue = Sample(3,4)->Red;}
+}
+If \texttt{operator()} is used on a pixel that is out of range, 
+it warns the user and automatically truncates the range. 
+
+\item 
+\underline{\texttt{bool SetSize( int NewWidth, int NewHeight )}:} Use 
+this to change the size of the object to \texttt{NewWidth} $\times$ 
+\texttt{NewHeight}. See the example above. If \texttt{NewWidth} or 
+\texttt{NewHeight} is non-positive, this function gives a warning 
+and does nothing. Returns true or false to indicate success or failure.
+
+\item 
+\underline{\texttt{bool SetBitDepth( int NewDepth )}:} This function 
+changes the bit depth to \texttt{NewDepth} bits per pixel. It also 
+automatically creates and/or resizes the color table, if necessary. 
+If \texttt{NewDepth} is not one of 1, 4, 8, 24, or 32, the function 
+gives an error and does nothing. Returns true or false to 
+indicate success or failure.
+
+
+\item 
+\underline{\texttt{bool WriteToFile( char* FileName )}:} This function 
+writes the current \texttt{BMP} object to the file 
+\texttt{FileName}. Returns true or false to indicate success or failure.
+
+
+\item 
+\underline{\texttt{bool ReadFromFile( char* FileName )}:} This function 
+reads the file \texttt{FileName} into the current \texttt{BMP} object.
+Returns true or false to indicate success or failure.
+
+\item 
+\underline{\texttt{RGBApixel GetColor( int ColorNumber )}:} This function 
+returns color number \texttt{ColorNumber} in the color table of the 
+current \texttt{BMP} object. If \texttt{ColorNumber} is out of range 
+or the \texttt{BMP} does not have a color table (e.g., in the case 
+of a 24-bit file), this function gives a warning and returns a 
+black pixel. 
+
+\item 
+\underline{\texttt{bool SetColor( int ColorNumber , RGBApixel NewColor)}:} 
+This function 
+sets color number \texttt{ColorNumber} in the color table of the 
+current \texttt{BMP} object to \texttt{NewColor}.  
+If \texttt{ColorNumber} is out of range or the \texttt{BMP} 
+does not have a color table (e.g., in the case 
+of a 24-bit file), this function gives a warning and does nothing.
+Returns true or false to indicate success or failure.
+
+\item 
+\underline{\texttt{bool CreateStandardColorTable( void )}:} 
+This function creates a ``Windows standard'' color table for the 
+\texttt{BMP} object. If the bit depth is 24 or 32, the function gives a 
+warning and does nothing. Returns true or false to indicate success or failure.
+
+
+\end{list}
+\end{document}

@@ -1,4 +1,4 @@
-function [F1Map, F2Map, CFAOut]=CFATamperDetection(im,NoiseThresh)
+function Result=CFATamperDetection(im,NoiseThresh)
     
     if nargin<2
         NoiseThresh=1;
@@ -70,6 +70,11 @@ function [F1Map, F2Map, CFAOut]=CFATamperDetection(im,NoiseThresh)
     ForVarExtraction(:,:,1)=GChannel;
     ForVarExtraction(:,:,2)=CFAGreen;
     F2Map=blockproc(ForVarExtraction,[W2-W2Overlap W2-W2Overlap],@getCFAVar,'BorderSize',[W2Overlap W2Overlap],'PadMethod','symmetric','TrimBorder',0,'UseParallel',1);
+    
+    Result.F1Map=F1Map;
+    Result.F2Map=F2Map;
+    Result.CFAOut=CFAOut;
+    
 end
 
 function [ Out ] = eval_block( block_struc )

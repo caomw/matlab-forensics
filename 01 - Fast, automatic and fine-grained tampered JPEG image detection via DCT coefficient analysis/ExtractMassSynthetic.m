@@ -1,25 +1,39 @@
-load('../Datasets.mat');
+load('../Datasets_Linux.mat');
 DataPath={CASIA2.au, CASIA2.tp, ColumbiaImage.au, ColumbiaImage.sp, ColumbiauUncomp.au, ColumbiauUncomp.sp, UCID.au, VIPPDempSchaReal.au, VIPPDempSchaReal.sp, VIPPDempSchaSynth.au, VIPPDempSchaSynth.sp, CASIA2Tw.au, CASIA2Tw.tp, ColumbiaImageTw.au, ColumbiaImageTw.sp, ColumbiauUncompTw.au, ColumbiauUncompTw.sp, UCIDTw.au, VIPPDempSchaRealTw.au, VIPPDempSchaRealTw.sp, VIPPDempSchaSynthTw.au, VIPPDempSchaSynthTw.sp, CASIA2TwRes.au, CASIA2TwRes.tp, ColumbiaImageTwRes.au, ColumbiaImageTwRes.sp, ColumbiauUncompTwRes.au, ColumbiauUncompTwRes.sp, UCIDTwRes.au, VIPPDempSchaRealTwRes.au, VIPPDempSchaRealTwRes.sp, VIPPDempSchaSynthTwRes.au, VIPPDempSchaSynthTwRes.sp};
 OutNames={'CASIA2_au.mat', 'CASIA2_tp.mat', 'ColumbiaImage_au.mat', 'ColumbiaImage_sp.mat', 'ColumbiauUncomp_au.mat', 'ColumbiauUncomp_sp.mat', 'UCID_au.mat', 'VIPPDempSchaReal_au.mat', 'VIPPDempSchaReal_sp.mat', 'VIPPDempSchaSynth_au.mat', 'VIPPDempSchaSynth_sp.mat', 'CASIA2Tw_au.mat', 'CASIA2Tw_tp.mat', 'ColumbiaImageTw_au.mat', 'ColumbiaImageTw_sp.mat', 'ColumbiauUncompTw_au.mat', 'ColumbiauUncompTw_sp.mat', 'UCIDTw_au.mat', 'VIPPDempSchaRealTw_au.mat', 'VIPPDempSchaRealTw_sp.mat', 'VIPPDempSchaSynthTw_au.mat', 'VIPPDempSchaSynthTw_sp.mat', 'CASIA2TwRes_au.mat', 'CASIA2TwRes_tp.mat', 'ColumbiaImageTwRes_au.mat', 'ColumbiaImageTwRes_sp.mat', 'ColumbiauUncompTwRes_au.mat', 'ColumbiauUncompTwRes_sp.mat', 'UCIDTwRes_au.mat', 'VIPPDempSchaRealTwRes_au.mat', 'VIPPDempSchaRealTwRes_sp.mat', 'VIPPDempSchaSynthTwRes_au.mat', 'VIPPDempSchaSynthTwRes_sp.mat'};
 Masks={'', '', '', '', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\Columbia Uncompressed Image Splicing Detection Evaluation Dataset', '', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\VIPP\A Framework for Decision Fusion in Image Forensics based on Dempster-Shafer Theory of Evidence\TIFS_RealisticDATASET\Forgery', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\VIPP\A Framework for Decision Fusion in Image Forensics based on Dempster-Shafer Theory of Evidence\TIFS_SyntheticDATASET', '', '', '', '', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\Columbia Uncompressed Image Splicing Detection Evaluation Dataset', '', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\VIPP\A Framework for Decision Fusion in Image Forensics based on Dempster-Shafer Theory of Evidence\TIFS_RealisticDATASET\Forgery', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\VIPP\A Framework for Decision Fusion in Image Forensics based on Dempster-Shafer Theory of Evidence\TIFS_SyntheticDATASET', '', '', '', '', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\Columbia Uncompressed Image Splicing Detection Evaluation Dataset', '', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\VIPP\A Framework for Decision Fusion in Image Forensics based on Dempster-Shafer Theory of Evidence\TIFS_RealisticDATASET\Forgery', '', 'D:\markzampoglou\ImageForensics\Datasets\Masks\VIPP\A Framework for Decision Fusion in Image Forensics based on Dempster-Shafer Theory of Evidence\TIFS_SyntheticDATASET'};
 
 
+DataPath={'/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/1st Image Forensics Challenge/dataset-dist/phase-01/training/fake/',
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/1st Image Forensics Challenge/dataset-dist/phase-01/training/pristine/',
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/1st Image Forensics Challenge/dataset-dist/phase-02/fake/',
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Columbia Uncompressed/4cam_auth',
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Columbia Uncompressed/4cam_splc',
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/VIPP/TIFS_RealisticDATASET/Forgery'
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/VIPP/TIFS_RealisticDATASET/NonTamp'
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/VIPP/TIFS_SyntheticDATASET/Sp',
+    '/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/VIPP/TIFS_SyntheticDATASET/Au/NonTamp'};
+
+OutNames={'1stTrainFake','1stTrainPrist','1stTest2Fake','ColUncompAu','ColUncompSp','TIFSRFor','TIFSRNon','TIFSSFor','TIFSSNon'};
+
+
 upLimit=inf;
 
-%Old values were th1 = 4; th2 = 2.5;
-% threshold on min-entropy of IPM
-th1 = 4.7;
-% threshold on min-entropy of DIPM
-th2 = 2.6;
+% set parameters
+ncomp = 1;
+c1 = 1;
+c2 = 15;
 
 for FolderInd=1:length(DataPath)
     
     List=[getAllFiles(DataPath{FolderInd},'*.jpg',true); getAllFiles(DataPath{FolderInd},'*.jpeg',true)];
+    
     if ~strcmp(Masks{FolderInd},'')
         MaskList=getAllFiles(Masks{FolderInd},'*.png',true);
     else
         MaskList=cell(0);
     end
+    
     OutPath=OutNames{FolderInd} ;
     disp(OutPath);
     dots=strfind(OutPath,'.');
@@ -33,14 +47,11 @@ for FolderInd=1:length(DataPath)
         end
         filename=List{ii};
         im = jpeg_read(filename);
-        
-        [H1,H2] = minHNA(im);
-        [k1,k2,Q,IPM,DIPM] = detectNA(im,1,th1,th2,false);
-        
-        Result.Feature=[Q H1 H2 k1 k2];
-        Result.IPM=IPM;
-        Result.DIPM=DIPM;
+        map = getJmap(im,ncomp,c1,c2);
+
+        Result=map;
         Name=List{ii};
+        
         
         if ~isempty(MaskList)
             if length(List)==length(MaskList)

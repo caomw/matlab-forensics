@@ -1,0 +1,59 @@
+
+02: just one map 
+1/8 (0,1)
+
+04: (2,1) cell, plus 'bayer' and 'F1'
+
+05: (5,2) cell 
+
+07:just one map (super fast)
+1/8 (0.0354, 0.7933)
+1/8 (0.0468, 5.9986)
+1/8 (0.6171, 25.4029)
+
+
+08: Result*s*: a structure including
+OutputX
+OutputY
+dispImages
+imin
+Qualities
+Mins
+
+
+09: a structure including
+.OutlierPrmsMap
+.OutlierPrmsMap_filtered
+.OutlierErrMap
+.OutlierErrMap_filtered
+.OutputStatistics
+
+
+
+10: just one map (super fast)
+768x1152
+96x144: 1/8 (0, 68)
+1024x1024: 1/8 (0,48)
+ALL INTEGERS
+
+12: a structure including 
+.estVDCT
+.estVHaar
+...and possibly .estVRand
+
+14: just one map 
+1024x1024
+128x128: 1/8 (-807.1352, 195.5472)
+
+
+16: should include an F1Out or F1, but maybe also F2Out or F2 and CFAOut of CFA or Bayer
+1704x2272
+F1: 107x142 : ~1/16 (0.0477, 0.2361)
+F2: 36x48 : 1/~47.3_ (1.0036, 2.2573)
+
+1728x2304
+F1: 108x144 : 1/16 (0.0074, 0.3220)
+F2: 36x48 : 1/48 (1.0016, 1.8874)
+
+
+

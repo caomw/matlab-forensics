@@ -1,0 +1,7 @@
+01 - Missing basic Feature_extract.
+Reconstruct from the "using imread" version.
+
+02 - Missing CFAloc.
+Replaced from .zip. Extend using CFA pattern detection (If necessary...)
+
+VIPP Realistic dataset contains a set of bounding boxes, check what they produce

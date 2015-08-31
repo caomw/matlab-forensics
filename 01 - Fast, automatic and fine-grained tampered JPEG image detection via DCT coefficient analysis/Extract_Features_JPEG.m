@@ -127,13 +127,14 @@ for channel=1%:length(im.coef_arrays)
             end
             P_u=num./denom;
             P_t=1./p_final(coeffIndex);
+            
             P_tampered(:,:,coeffIndex)=P_t./(P_u+P_t);
             P_untampered(:,:,coeffIndex)=P_u./(P_u+P_t);
             
             %image(uint8( P_tampered(:,:,coeffIndex)*255));colormap(gray(255));
             
         else
-            P_tampered(:,:,coeffIndex)=ones(ceil(im.image_height/8),ceil(im.image_width/8))*0.5;
+            P_tampered(:,:,coeffIndex)=ones(ceil(size(coeffArray,1)/8),ceil(size(coeffArray,2)/8))*0.5;
             P_untampered(:,:,coeffIndex)=1-P_tampered(:,:,coeffIndex);
         end
     end

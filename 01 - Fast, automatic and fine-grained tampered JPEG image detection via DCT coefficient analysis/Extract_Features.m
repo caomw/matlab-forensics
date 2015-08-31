@@ -6,9 +6,9 @@ function [Feature_Vector, OutputMap, coeffArray] = Extract_Features( im )
 Display=false;
 
 if isstruct(im)
-     [Feature_Vector, OutputMap, coeffArray] = Extract_Features_JPEG( im, Display )
+     [Feature_Vector, OutputMap, coeffArray] = Extract_Features_JPEG( im, Display );
 else
-    [Feature_Vector, OutputMap, coeffArray] = Extract_Features_NonJPEG( im, Display )
+    [Feature_Vector, OutputMap, coeffArray] = Extract_Features_NonJPEG( im, Display );
 end
 
 

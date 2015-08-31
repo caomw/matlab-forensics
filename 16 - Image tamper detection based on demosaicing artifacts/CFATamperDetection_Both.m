@@ -1,4 +1,4 @@
-function Result=CFATamperDetection(im,NoiseThresh)
+function Result=CFATamperDetection_Both(im,NoiseThresh)
     
     if nargin<2
         NoiseThresh=1;

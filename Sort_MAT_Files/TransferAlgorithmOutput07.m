@@ -1,14 +1,14 @@
 In_Base='/media/marzampoglou/3TB/Recovery/Recuva/Excellent/Folders/folder_mat/';
-FolderIn='05/TwRes';
+FolderIn='07/Tw';
 NameSuffix='_Tw';
 
 SortedOutDir=['/media/marzampoglou/3TB/Recovery/Recuva/Excellent/Folders/folder_mat/SortedOut/' FolderIn '/'];
 mkdir(SortedOutDir);
 
 Out_Base='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
-FolderOut='05 - Image Forgery Localization via Block-Grained Analysis of JPEG Artifacts/';
+FolderOut='07 - Using noise inconsistencies for blind image forensics/';
 Quality=75;
-Rescale=true;
+Rescale=false;
 
 FinalOutputFolder=[Out_Base FolderOut num2str(Quality) '_' num2str(Rescale) '/'];
 
@@ -28,7 +28,7 @@ for ii=1:length(InList)
         Dots=strfind(Loaded.Name,'.');
         FinalDot=Dots(end);
         
-        OutBaseInd=strfind(Loaded.Name,'TwResJPEG/')+10;
+        OutBaseInd=strfind(Loaded.Name,'TwJPEG/')+7;
         
         
         SubFolderStructure=Loaded.Name(OutBaseInd:FinalSlash);
@@ -43,12 +43,11 @@ for ii=1:length(InList)
         
         
         BinMask=Loaded.BinMask;
-        Ks=Loaded.Ks;
         Name=[SubFolderStructure PlainName];
         Result=Loaded.Result;
         
         if ~exist([FinalOutputFolder SubFolderStructure PlainName '.mat'],'file')
-            save([FinalOutputFolder SubFolderStructure PlainName '.mat'], 'BinMask', 'Ks', 'Name', 'Result', 'Quality', 'Rescale', '-v7.3');
+            save([FinalOutputFolder SubFolderStructure PlainName '.mat'], 'BinMask', 'Name', 'Result', 'Quality', 'Rescale', '-v7.3');
             system(['mv ' In_Base FolderIn '/' InList(ii).name ' ' SortedOutDir]);
         else  
             disp(['File exists! ' FinalOutputFolder SubFolderStructure PlainName '.mat']);

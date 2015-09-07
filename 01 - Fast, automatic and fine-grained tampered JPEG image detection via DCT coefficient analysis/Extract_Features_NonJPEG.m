@@ -126,7 +126,7 @@ for channel=1%:length(im.coef_arrays)
             %image(uint8( P_tampered(:,:,coeffIndex)*255));colormap(gray(255));
             
         else
-            P_tampered(:,:,coeffIndex)=ones(ceil(im.image_height/8),ceil(im.image_width/8))*0.5;
+            P_tampered(:,:,coeffIndex)=ones(floor(size(im,1)/8),floor(size(im,2)/8))*0.5;
             P_untampered(:,:,coeffIndex)=1-P_tampered(:,:,coeffIndex);
         end
     end

@@ -17,7 +17,7 @@ mkdir(FinalDuplicateFolder);
 
 InList=dir([In_Base FolderIn '/*.mat']);
 disp('Starting');
-for ii=1:2000%:length(InList)
+for ii=1:length(InList)
     Loaded=load([In_Base FolderIn '/' InList(ii).name]);
     if strcmp(Loaded.Name(1:3),'D:\')
         Slashes=strfind(Loaded.Name,'\');

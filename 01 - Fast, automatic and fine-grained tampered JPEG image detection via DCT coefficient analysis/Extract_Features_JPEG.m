@@ -37,8 +37,8 @@ for channel=1%:length(im.coef_arrays)
         coeffList=reshape(selectedCoeffs,1,numel(selectedCoeffs));
 
         
-        minHistValue=min(coeffList);
-        maxHistValue=max(coeffList);
+        minHistValue=min(coeffList)-1;
+        maxHistValue=max(coeffList)+1;
         
         coeffHist=hist(coeffList,minHistValue:maxHistValue);
         %figure;subplot(1,2,1);

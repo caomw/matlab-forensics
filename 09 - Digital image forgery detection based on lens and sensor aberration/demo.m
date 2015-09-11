@@ -5,4 +5,3 @@ function demo(im)
     [OutlierPrmsMap, OutlierPrmsMap_filtered, OutlierErrMap, OutlierErrMap_filtered, OutputStatistics]=findAberrations_compact(im);
     imagesc(OutlierPrmsMap_filtered)
 end
-

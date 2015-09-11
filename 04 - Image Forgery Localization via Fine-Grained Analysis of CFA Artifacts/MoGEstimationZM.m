@@ -1,5 +1,5 @@
 % Copyright (C) 2011 Signal Processing and Communications Laboratory (LESC),       
-% Dipartimento di Elettronica e Telecomunicazioni - Università di Firenze                        
+% Dipartimento di Elettronica e Telecomunicazioni - Universitï¿½ di Firenze                        
 % via S. Marta 3 - I-50139 - Firenze, Italy                   
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -29,6 +29,7 @@ max_iter = 500;
 % NaN and Inf management
 
 statistics(isnan(statistics)) = 1;
+statistics(statistics<0)=0;
 data = log(statistics(:)); 
 data = data(not(isinf(data)|isnan(data)));                     
 
@@ -45,4 +46,3 @@ sigma = sqrt([v2; v1]);
 mix_perc = [1-alpha;alpha];
 
 return
-

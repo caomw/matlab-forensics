@@ -1,5 +1,5 @@
 % Copyright (C) 2011 Signal Processing and Communications Laboratory (LESC),       
-% Dipartimento di Elettronica e Telecomunicazioni - Università di Firenze                        
+% Dipartimento di Elettronica e Telecomunicazioni - Universitï¿½ di Firenze                        
 % via S. Marta 3 - I-50139 - Firenze, Italy                   
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -26,6 +26,9 @@ pattern = kron(ones(Nb/2,Nb/2),Bayer);
 func = @(sigma) (prod(sigma(logical(pattern)))/(prod(sigma(not(logical(pattern))))));
 
 statistics = blkproc(map,[Nb Nb],func);
+
+statistics(isnan(statistics))=1;
+statistics(isinf(statistics))=0;
 
 return
 

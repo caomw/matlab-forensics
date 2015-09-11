@@ -22,7 +22,7 @@ function [k1,k2,Q,IPM,DIPM] = detectNA(im,ncomp,th1,th2,show)
 %           if NA-JPEG compression is not detected: k1 = k2 = Q = 0
 %
 % Copyright (C) 2011 Signal Processing and Communications Laboratory (LESC),       
-% Dipartimento di Elettronica e Telecomunicazioni - Università di Firenze                        
+% Dipartimento di Elettronica e Telecomunicazioni - Universitï¿½ di Firenze                        
 % via S. Marta 3 - I-50139 - Firenze, Italy                   
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -102,6 +102,10 @@ k2sQ = 0;
 Q = 0;
 maxQmap = 0;
 minHbest = 6;
+
+DIPM=zeros(8,8);
+IPM=zeros(8,8);
+
 for k = 1:length(periods)
     Qmaptmp = Qmap(:,:,k);
     if periods(k) == Q2

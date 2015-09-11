@@ -1,5 +1,5 @@
 % Copyright (C) 2011 Signal Processing and Communications Laboratory (LESC),       
-% Dipartimento di Elettronica e Telecomunicazioni - Università di Firenze                        
+% Dipartimento di Elettronica e Telecomunicazioni - Universitï¿½ di Firenze                        
 % via S. Marta 3 - I-50139 - Firenze, Italy                   
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ max = 1e304;
 statistics(isnan(statistics))=1;
 statistics(isinf(statistics))=max;
 statistics(statistics == 0) = min;
-
+statistics(statistics<0)=0;
 
 mu1=mu(2);
 mu2=mu(1);

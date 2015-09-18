@@ -90,7 +90,15 @@ for Quality=Qualities
                             
                         end
                         
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result','bayer','F1','Nb','Ns','Name','-v7.3');
+=======
                         save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result','ImageIn','bayer','F1','Nb','Ns','-v7.3');
+>>>>>>> 9c91a43a5f9f9606503509c0f3394d63a8a749de
+=======
+                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result','ImageIn','bayer','F1','Nb','Ns','-v7.3');
+>>>>>>> origin/master
                     end
                     if mod(fileInd,15)==0
                         disp(fileInd)

@@ -101,8 +101,18 @@ Statistics.MaxF14_Vals=zeros(1,length(Statistics.F14_List));
 Statistics.MinF14_Vals=zeros(1,length(Statistics.F14_List));
 for ii=1:length(Statistics.F14_List)
     Loaded=load(Statistics.F14_List{ii});
+<<<<<<< HEAD
+<<<<<<< HEAD
+    Statistics.F14_MaxVals(ii)=max(max(Loaded.Result));
+    Statistics.F14_MinVals(ii)=min(min(Loaded.Result));
+=======
     Statistics.MaxF14_Vals(ii)=max(max(Loaded.Result));
     Statistics.MinF14_Vals(ii)=min(min(Loaded.Result));
+>>>>>>> 9c91a43a5f9f9606503509c0f3394d63a8a749de
+=======
+    Statistics.MaxF14_Vals(ii)=max(max(Loaded.Result));
+    Statistics.MinF14_Vals(ii)=min(min(Loaded.Result));
+>>>>>>> origin/master
     if mod(ii,500)==0
         disp(ii)
     end
@@ -115,3 +125,14 @@ Statistics.F05A_Hist=hist(Statistics.F05A_Vals,[min(Statistics.F05A_Vals):max(St
 Statistics.F05A_99=46;
 Statistics.F05NA_Hist=hist(Statistics.F05NA_Vals,[min(Statistics.F05NA_Vals):max(Statistics.F05NA_Vals)]);
 Statistics.F05NA_99=31;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+Statistics.F04_2_Hist=hist(Statistics.F04_2_Vals,[min(Statistics.F05A_Vals):max(Statistics.F05A_Vals)]);
+Statistics.F04_8_Hist=hist(Statistics.F04_8_Vals,[min(Statistics.F05NA_Vals):max(Statistics.F05NA_Vals)]);
+
+=======
+>>>>>>> 9c91a43a5f9f9606503509c0f3394d63a8a749de
+=======
+>>>>>>> origin/master

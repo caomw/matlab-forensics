@@ -18,7 +18,7 @@ function [Q, alpha, Lmax, ii] = EMperiod(x, Qmin, Qmax, alpha0, p0, p1, dLmin, m
 % ii: final number of iterations
 %
 % Copyright (C) 2011 Signal Processing and Communications Laboratory (LESC),       
-% Dipartimento di Elettronica e Telecomunicazioni - Università di Firenze                        
+% Dipartimento di Elettronica e Telecomunicazioni - Universitï¿½ di Firenze                        
 % via S. Marta 3 - I-50139 - Firenze, Italy                   
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -56,8 +56,13 @@ Lmax = -inf;
 delta_L = inf;
 ii = 0;
 
+    % Markos: for cases where the if clause is never activated    
+    Q=Qvec(1);
+    alpha=alphavec(1);
+
 while delta_L > dLmin && ii < maxIter
     ii = ii + 1;
+    
     for k = 1:length(Qvec)
 
         % expectation

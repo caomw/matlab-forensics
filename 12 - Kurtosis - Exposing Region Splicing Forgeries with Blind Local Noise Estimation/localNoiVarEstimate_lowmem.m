@@ -53,6 +53,8 @@ mu4 = block_avg(ch.^4,br,'mi');
 
 load('mu3.mat');
 load('mu1.mat');
+delete('mu1.mat','mu3.mat');
+
 %[r,w] = unix('free | grep Mem');
 %stats = str2double(regexp(w, '[0-9]*', 'match'));
 %memsize = stats(1)/1e6;
@@ -64,8 +66,8 @@ load('mu1.mat');
 Factor34=mu4 - 4*mu1.*mu3;
 clear('mu4','mu3');
 
-load('mu1.mat');
 load('mu2.mat');
+delete('mu2.mat');
 
 noiV = mu2 - mu1.^2;
 noiK = (Factor34 + 6*mu1.^2.*mu2 - 3*mu1.^4)./(noiV.^2)-3; 

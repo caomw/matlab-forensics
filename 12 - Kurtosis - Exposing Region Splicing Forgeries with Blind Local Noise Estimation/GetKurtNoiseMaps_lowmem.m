@@ -1,4 +1,4 @@
-function [ estVDCT, estVHaar, estVRand ] = GetKurtNoiseMaps( im )
+function [ estVDCT, estVHaar, estVRand ] = GetKurtNoiseMaps_lowmem( im )
     %GETKURTNOISEMAPS Summary of this function goes here
     %   Detailed explanation goes here
     sz = 3; % size of the pre-smoothing filters
@@ -49,5 +49,7 @@ function [ estVDCT, estVHaar, estVRand ] = GetKurtNoiseMaps( im )
     estVHaar(estVHaar<=0.001)=single(mean(mean(mean(estVHaar))));
     estVRand(estVRand<=0.001)=single(mean(mean(mean(estVRand))));
    
+    delete('estVDCT.mat','estVHaar.mat','estVRand.mat');
+    
 end
 

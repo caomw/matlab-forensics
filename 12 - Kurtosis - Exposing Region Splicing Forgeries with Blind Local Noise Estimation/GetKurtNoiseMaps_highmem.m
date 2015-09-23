@@ -1,4 +1,4 @@
-function [ estVDCT, estVHaar, estVRand ] = GetKurtNoiseMaps( im )
+function [ estVDCT, estVHaar, estVRand ] = GetKurtNoiseMaps_highmem( im )
     %GETKURTNOISEMAPS Summary of this function goes here
     %   Detailed explanation goes here
     sz = 3; % size of the pre-smoothing filters

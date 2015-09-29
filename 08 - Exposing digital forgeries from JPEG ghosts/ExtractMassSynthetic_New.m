@@ -1,21 +1,22 @@
-AlgorithmName='04';
+AlgorithmName='08';
 
-Qualities=[0 100 95 85 75 65];
+Qualities=[0 75]; %[0 100 95 85 75 65]; 
 Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'Carvalho'};%'ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
-OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
+OutputRoot='/home/marzampoglou/ImageForensicsFeatures/';
+%'/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
 MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
 load('../Datasets_Linux.mat');
 
-    % dimension of statistics
-    Nb = [2, 8];
-    % number of cumulated bloks
-    Ns = 1;
+% set parameters
+checkDisplacements=0;
+smoothFactor=1;
+
 
 for Quality=Qualities
     for Rescale=Rescales
@@ -60,13 +61,7 @@ for Quality=Qualities
                         
                         
                         ImageIn=CleanUpImage(FileList{fileInd});
-                        toCrop=mod(size(ImageIn),2);
-                        ImageIn=ImageIn(1:end-toCrop(1),1:end-toCrop(2),:);
-    
-                        [bayer, F1]=GetCFASimple(ImageIn);                        
-                        for j = 1:2
-                            [Result{j}, stat{j}] = CFAloc(ImageIn, bayer, Nb(j),Ns);
-                        end
+                        [Results.OutputX, Results.OutputY, Results.dispImages, Results.imin, Results.Qualities, Results.Mins]=Ghost(ImageIn, checkDisplacements, smoothFactor);
                         
                         Name=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'],'');
                         Name=strrep(Name,InputOrigRoot,'');
@@ -87,11 +82,8 @@ for Quality=Qualities
                             else
                                 error('Something is wrong with the masks');
                             end
-                            
                         end
-                        
-                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result','bayer','F1','Nb','Ns','Name','-v7.3');
-
+                        save(OutputName,'Name','Quality','Rescale','BinMask','AlgorithmName','Results','-v7.3');
                     end
                     if mod(fileInd,15)==0
                         disp(fileInd)

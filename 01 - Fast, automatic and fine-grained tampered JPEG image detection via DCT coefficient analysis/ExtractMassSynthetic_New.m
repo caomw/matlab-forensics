@@ -4,14 +4,13 @@ Qualities=[0 100 95 85 75 65];
 Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
 OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
 MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
 load('../Datasets_Linux.mat');
-
 
 
 for Quality=Qualities
@@ -56,12 +55,11 @@ for Quality=Qualities
                         end
                         
                         
-                        if strcmp(FileList{fileInd}(end-3:end),'.jpg') && strcmp(FileList{fileInd}(end-4:end),'.jpeg')
+                        if strcmp(FileList{fileInd}(end-3:end),'.jpg') || strcmp(FileList{fileInd}(end-4:end),'.jpeg')
                             ImageIn=jpeg_read(FileList{fileInd});
                         else
                             ImageIn=CleanUpImage(FileList{fileInd});
                         end
-                        
                         [Feature_Vector, Result, coeffArray] = Extract_Features(ImageIn);
                         
                         Name=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'],'');
@@ -86,7 +84,7 @@ for Quality=Qualities
                             
                         end
                         
-                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Feature_Vector','Result','coeffArray','-v7.3');
+                        save(OutputName,'Name','Quality','Rescale','BinMask','AlgorithmName','Feature_Vector','Result','coeffArray','-v7.3');
                     end
                     if mod(fileInd,15)==0
                         disp(fileInd)

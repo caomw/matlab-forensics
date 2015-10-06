@@ -1,6 +1,6 @@
 AlgorithmName='08';
 
-Qualities=[0 75]; %[0 100 95 85 75 65]; 
+Qualities=[0 100 95 75]; %[0 100 95 85 75 65]; 
 Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');

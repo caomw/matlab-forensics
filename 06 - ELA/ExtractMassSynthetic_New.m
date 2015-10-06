@@ -1,4 +1,4 @@
-AlgorithmName='14';
+AlgorithmName='06';
 
 Qualities=[0 100 95 85 75 65];
 Rescales=[false];
@@ -12,6 +12,9 @@ OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/Alg
 MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
 load('../Datasets_Linux.mat');
 
+Quality=90;
+Multiplier=20;
+Flatten=true;
 
 for Quality=Qualities
     for Rescale=Rescales
@@ -56,7 +59,7 @@ for Quality=Qualities
                         
                         
                         im=CleanUpImage(FileList{fileInd});
-                        Result = GetBlockGrid(im);                        
+                        Result = ELA(im,Quality,Multiplier,Flatten);
                         
                         Name=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'],'');
                         Name=strrep(Name,InputOrigRoot,'');
@@ -78,7 +81,7 @@ for Quality=Qualities
                                 error('Something is wrong with the masks');
                             end
                         end
-                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result','Name','-v7.3');
+                        save(OutputName,'Quality','Rescale','AlgorithmName','Result','Name','-v7.3');
                     end
                     if mod(fileInd,15)==0
                         disp(fileInd)

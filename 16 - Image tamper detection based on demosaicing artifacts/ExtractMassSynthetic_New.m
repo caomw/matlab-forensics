@@ -1,4 +1,8 @@
-AlgorithmName='14';
+c=parcluster('local');
+c.NumWorkers=8;
+parpool(c,8);
+
+AlgorithmName='16';
 
 Qualities=[0 100 95 85 75 65];
 Rescales=[false];
@@ -12,6 +16,7 @@ OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/Alg
 MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
 load('../Datasets_Linux.mat');
 
+BlockSize=8;
 
 for Quality=Qualities
     for Rescale=Rescales
@@ -56,7 +61,7 @@ for Quality=Qualities
                         
                         
                         im=CleanUpImage(FileList{fileInd});
-                        Result = GetBlockGrid(im);                        
+                        Result=CFATamperDetection_Both(im);
                         
                         Name=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'],'');
                         Name=strrep(Name,InputOrigRoot,'');
@@ -88,3 +93,5 @@ for Quality=Qualities
         end
     end
 end
+
+delete(gcp)

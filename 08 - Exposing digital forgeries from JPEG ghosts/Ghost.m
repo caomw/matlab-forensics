@@ -24,11 +24,10 @@ Output=[];
 smoothing_b=17;
 
 Offset=(smoothing_b-1)/2;
-
+    
 for ii=minQ:stepQ:maxQ
     imwrite(imorig,'tmpResave.jpg','JPEG','Quality',ii);
     tmpResave=double(imread('tmpResave.jpg'));
-    
     Deltas=[];
     overallDelta=[];
     for dispx=0:maxDisp

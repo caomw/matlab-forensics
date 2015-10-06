@@ -1,0 +1,16 @@
+AlgorithmNames={'01' '02' '04' '05' '07' '10' '12' '14' '16'};
+
+EntireFileList=cell(0);
+for Algorithm=1:length(AlgorithmNames)
+    EntireFileList=[EntireFileList;getAllFiles(['/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/' AlgorithmNames{Algorithm} '/'],'*.mat','true')];
+end
+
+for fileInd=1:length(EntireFileList)
+    if ~strcmp(EntireFileList{fileInd},'Wild W'
+        MatContents=whos('-file',EntireFileList{fileInd});
+
+    Found=0;
+    for Var=1:length(MatContents)
+        if strcmp(
+    end
+end

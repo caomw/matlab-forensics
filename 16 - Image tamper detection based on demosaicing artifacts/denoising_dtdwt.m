@@ -1,4 +1,4 @@
-function y = denoising_dtdwt(x,Depth)
+function y = denoising_dtdwt(x,Depth,nor)
 % Local Adaptive Image Denoising Algorithm
 % Usage :
 %        y = denoising_dtdwt(x)
@@ -24,7 +24,7 @@ L = length(x); % length of the original image.
 N = L+2^J;     % length after extension.
 x = symextend(x,2^(J-1));
 
-load nor_dualtree    % run normaliz_coefcalc_dual_tree to generate this mat file.
+%load nor_dualtree    % run normaliz_coefcalc_dual_tree to generate this mat file.
 
 % Forward dual-tree DWT
 % Either FSfarras or AntonB function can be used to compute the stage 1 filters  
@@ -55,7 +55,7 @@ for scale = 1:J-1
             Y_parent_imag = W{scale+1}{2}{dir}{dir1};
             % Extend noisy parent matrix to make the matrix size the same as the coefficient matrix.
             Y_parent_real  = expand(Y_parent_real);
-            Y_parent_imag   = expand(Y_parent_imag);
+            Y_parent_imag  = expand(Y_parent_imag);
             
             % Signal variance estimation
             Wsig = conv2(windowfilt,windowfilt,(Y_coef_real).^2,'same');

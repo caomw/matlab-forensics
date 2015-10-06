@@ -1,10 +1,10 @@
-AlgorithmName='05';
+AlgorithmName='07';
 
 Qualities=[0 100 95 85 75 65];
 Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
@@ -97,7 +97,7 @@ for Quality=Qualities
                                 error('Something is wrong with the masks');
                             end
                         end
-                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result','Ks','-v7.3');
+                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result','Ks','Name','-v7.3');
                     end
                     if mod(fileInd,15)==0
                         disp(fileInd)

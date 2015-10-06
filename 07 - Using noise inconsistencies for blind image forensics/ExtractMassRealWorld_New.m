@@ -1,12 +1,8 @@
-AlgorithmName='04';
+AlgorithmName='07';
 
 Datasets=load('../Datasets_Linux.mat');
 
-
-% dimension of statistics
-Nb = [2, 8];
-% number of cumulated bloks
-Ns = 1;
+BlockSize=8;
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
@@ -37,16 +33,11 @@ for Folder=1:length(Folders)
                 Salv.Name=strrep(InputFileName,InputOrigRoot,'');
                 save(OutputName, '-struct','Salv');
             else
+                im=CleanUpImage(InputFileName);
+                Result = GetNoiseMap(im, BlockSize);                        
                 
-                ImageIn=CleanUpImage(InputFileName);
-                [bayer, F1]=GetCFASimple(ImageIn);
-                for j = 1:2
-                    [Result{j}, stat{j}] = CFAloc(ImageIn, bayer, Nb(j),Ns);
-                end
                 Name=strrep(InputFileName,InputOrigRoot,'');
-                disp
-                pause
-                save(OutputName,'AlgorithmName','Result','bayer','F1','Nb','Ns','Name','-v7.3');
+                save(OutputName,'AlgorithmName','Result','Name','-v7.3');
             end
             if mod(fileInd,15)==0
                 disp(fileInd)

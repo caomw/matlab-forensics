@@ -1,4 +1,4 @@
-function OutputMap = ELA( ImIn, Quality, Multiplier )
+function OutputMap = ELA( ImIn, Quality, Multiplier, Flatten)
     %ELA Summary of this function goes here
     %   Detailed explanation goes here
     
@@ -7,5 +7,8 @@ function OutputMap = ELA( ImIn, Quality, Multiplier )
     
     OutputMap=abs(double(ImIn)-double(ImJPG))*Multiplier;
     
+    if Flatten
+        OutputMap=mean(OutputMap,3);
+    end
 end
 

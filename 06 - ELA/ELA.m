@@ -5,7 +5,8 @@ function OutputMap = ELA( ImIn, Quality, Multiplier, Flatten)
     imwrite(ImIn,'tmp.jpg','Quality',Quality);
     ImJPG=imread('tmp.jpg');
     
-    OutputMap=abs(double(ImIn)-double(ImJPG))*Multiplier;
+    OutputMap=(abs(double(ImIn)-double(ImJPG))*Multiplier);
+    
     
     if Flatten
         OutputMap=mean(OutputMap,3);

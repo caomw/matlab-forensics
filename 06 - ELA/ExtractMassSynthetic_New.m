@@ -12,8 +12,8 @@ OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/Alg
 MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
 load('../Datasets_Linux.mat');
 
-Quality=90;
-Multiplier=20;
+Quality=75;
+Multiplier=1;
 Flatten=true;
 
 for Quality=Qualities
@@ -60,7 +60,6 @@ for Quality=Qualities
                         
                         im=CleanUpImage(FileList{fileInd});
                         Result = ELA(im,Quality,Multiplier,Flatten);
-                        
                         Name=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'],'');
                         Name=strrep(Name,InputOrigRoot,'');
                         MaskFile=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'], MaskRoot);

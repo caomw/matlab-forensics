@@ -1,10 +1,6 @@
 function Result=CFATamperDetection_Both(im,NoiseThresh)
     
-    timer1=0;
-    timer2=0;
-    timer3=0;
-    timer4=0;
-    timer5=0;
+
     
     if nargin<2
         NoiseThresh=1;
@@ -44,20 +40,20 @@ function Result=CFATamperDetection_Both(im,NoiseThresh)
         BinFilter(:,:,3)=repmat(B,size(im,1)/2,size(im,2)/2);
         CFAIm=double(im).*BinFilter;
         BilinIm=bilinInterp(CFAIm,BinFilter,CFA);
-        timer1=timer1+toc; 
+        
         
         ProcIm(:,:,1:3)=im;
         ProcIm(:,:,4:6)=double(BilinIm);
         
         %ProcIm(:,:,4:6)=(im-double(BilinIm)).^2;
-        ;
+        
         ProcIm=double(ProcIm);
         BlockResult=blockproc(ProcIm,[W1 W1],@eval_block);
         
         Stds=BlockResult(:,:,4:6);
         BlockDiffs=BlockResult(:,:,1:3);
         NonSmooth=Stds>StdThresh;
-        timer2=timer2+toc;;
+
         
         MeanError(TestArray)=mean(mean(mean(BlockDiffs(NonSmooth))));
         BlockDiffs=BlockDiffs./repmat(sum(BlockDiffs,3),[1 1 3]);
@@ -68,7 +64,7 @@ function Result=CFATamperDetection_Both(im,NoiseThresh)
         Diffs(TestArray,:)=reshape(BlockDiffs(:,:,2),1,numel(BlockDiffs(:,:,2)));
         
         F1Maps{TestArray}=BlockDiffs(:,:,2);
-        timer3=timer3+toc;
+
     end
     
     Diffs(isnan(Diffs))=0;
@@ -89,7 +85,6 @@ function Result=CFATamperDetection_Both(im,NoiseThresh)
     
     ForVarExtraction=double(ForVarExtraction);
     F2Map=blockproc(ForVarExtraction,[W2-W2Overlap W2-W2Overlap],@getCFAVar,'BorderSize',[W2Overlap W2Overlap],'PadMethod','symmetric','TrimBorder',0,'UseParallel',1);
-    timer4=timer4+toc;
     
     Result.F1Map=F1Map;
     Result.F2Map=F2Map;

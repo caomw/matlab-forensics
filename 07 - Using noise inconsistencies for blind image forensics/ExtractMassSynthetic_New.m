@@ -1,7 +1,7 @@
 AlgorithmName='07';
 
-Qualities=[0 100 95 85 75 65];
-Rescales=[false];
+Qualities=75 %[0 100 95 85 75 65];
+Rescales=[true];
 
 Datasets=load('../Datasets_Linux.mat');
 DatasetList={'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};

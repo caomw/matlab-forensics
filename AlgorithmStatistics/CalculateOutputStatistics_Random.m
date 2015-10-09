@@ -41,5 +41,5 @@ for AlgInd=1:length(Algorithms)
         end
     end
     
-    %save('RandomSamplingStatistics_2.mat','Statistics');
+    save('RandomSamplingStatistics_2.mat','Statistics');
 end

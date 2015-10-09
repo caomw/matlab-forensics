@@ -53,7 +53,12 @@ mu4 = block_avg(ch.^4,br,'mi');
 
 load('~/mu3.mat');
 load('~/mu1.mat');
-delete('~/mu1.mat','mu3.mat');
+if ~exist('~/mu3.mat')
+    disp('Missing 3')
+    pause;
+end
+delete('~/mu1.mat')
+delete('~/mu3.mat');
 
 %[r,w] = unix('free | grep Mem');
 %stats = str2double(regexp(w, '[0-9]*', 'match'));

@@ -1,10 +1,10 @@
 AlgorithmName='06';
 
-Qualities=[0 100 95 85 75 65];
+Qualities=0%[0 100 95 85 75 65];
 Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'FirstChallengeTrain'};{'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
@@ -41,8 +41,6 @@ for Quality=Qualities
                 for fileExtension={'*.jpg','*.jpeg','*.png','*.gif','*.tif','*.bmp'}
                     FileList=[FileList;getAllFiles(InputPath,fileExtension{1},true)];
                 end
-                
-                
                 for fileInd=1:length(FileList)
                     if Quality==0 && Rescale==0
                         OutputName=[strrep(FileList{fileInd},InputOrigRoot,[OutputRoot AlgorithmName '/0_0/']) '.mat'];

@@ -1,10 +1,10 @@
 AlgorithmName='14';
 
-Qualities=[0 100 95 85 75 65];
-Rescales=[false];
+Qualities=75;%[0 100 95 85 75 65];
+Rescales=[true];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'Carvalho','ColumbiauUncomp','VIPPDempSchaReal','VIPPDempSchaSynth','FirstChallengeTrain', 'FirstChallengeTest2'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
@@ -45,6 +45,30 @@ for Quality=Qualities
                         OutputName=[strrep(FileList{fileInd},InputOrigRoot,[OutputRoot AlgorithmName '/0_0/']) '.mat'];
                     else
                         OutputName=[strrep(FileList{fileInd},InputResaveRoot,[OutputRoot AlgorithmName]) '.mat'];
+                    end
+                    
+                    if ~exist(OutputName)
+                    if exist(strrep(OutputName,'.tif.jpg.mat','.jpg.mat'));
+                        existingfile=strrep(OutputName,'.tif.jpg.mat','.jpg.mat');
+                        movefile(existingfile,OutputName);
+                        disp('exists')
+                    end
+                    end
+                    if ~exist(OutputName)
+                    if exist(strrep(OutputName,'.jpg.jpg.mat','.jpg.mat'));
+                        existingfile=strrep(OutputName,'.jpg.jpg.mat','.jpg.mat');
+                        movefile(existingfile,OutputName);
+                        disp('exists')
+                    end
+                    end
+                                        if ~exist(OutputName)
+
+                                            if exist(strrep(OutputName,'.jpeg.jpg.mat','.jpg.mat'));
+                        existingfile=strrep(OutputName,'.jpeg.jpg.mat','.jpg.mat');
+                        movefile(existingfile,OutputName);
+                        disp('exists')
+                                            end
+                    
                     end
                     
                     if ~exist(OutputName)

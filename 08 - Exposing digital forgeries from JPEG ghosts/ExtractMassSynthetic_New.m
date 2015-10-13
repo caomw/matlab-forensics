@@ -1,6 +1,6 @@
 AlgorithmName='08';
 
-Qualities=[0 100 95 75]; %[0 100 95 85 75 65]; 
+Qualities=[0 100 95 85 75 65]; 
 Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
@@ -8,7 +8,7 @@ DatasetList={'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain', 'FirstChalleng
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
-OutputRoot='/home/marzampoglou/ImageForensicsFeatures/';
+OutputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/AlgorithmOutput/';
 %'/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
 MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
 load('../Datasets_Linux.mat');
@@ -43,7 +43,6 @@ for Quality=Qualities
                 for fileExtension={'*.jpg','*.jpeg','*.png','*.gif','*.tif','*.bmp'}
                     FileList=[FileList;getAllFiles(InputPath,fileExtension{1},true)];
                 end
-                
                 
                 for fileInd=1:length(FileList)
                     if Quality==0 && Rescale==0
@@ -83,7 +82,7 @@ for Quality=Qualities
                                 error('Something is wrong with the masks');
                             end
                         end
-                        save(OutputName,'Name','Quality','Rescale','BinMask','AlgorithmName','Results','-v7.3');
+                        save(OutputName,'Name','Quality','Rescale','AlgorithmName','Results','-v7.3');
                     end
                     if mod(fileInd,15)==0
                         disp(fileInd)

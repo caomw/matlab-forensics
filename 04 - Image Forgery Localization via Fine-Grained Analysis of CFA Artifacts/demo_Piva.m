@@ -1,7 +1,7 @@
 % Demo of CFA localization algorithm
 %
 % Copyright (C) 2011 Signal Processing and Communications Laboratory (LESC),       
-% Dipartimento di Elettronica e Telecomunicazioni - Università di Firenze                        
+% Dipartimento di Elettronica e Telecomunicazioni - Universitï¿½ di Firenze                        
 % via S. Marta 3 - I-50139 - Firenze, Italy                   
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-filename = {'2.Columb.tif','2.Columb.tif'};
+filename = {'flowers.tiff','flowers-tampered.tiff','garden.jpg','garden-tampered.jpg'};
 
 % dimensione of statistics
 Nb = [2, 8];

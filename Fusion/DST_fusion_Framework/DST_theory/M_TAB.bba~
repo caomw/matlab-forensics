@@ -1,0 +1,95 @@
+Name = 
+    M_TAB
+
+Model File=
+	ABCDE.mod
+
+K = 
+    0
+
+BBA = {
+
+		<assignment>
+			<mass> 0  </mass>       
+            <name>(tcfa, tna, tal, tN, tA, tC)</name>	<id>1</id>
+            <name>(tcfa, tna, tal, tN, tA, nC)</name>	<id>2</id>
+            <name>(tcfa, tna, tal, tN, nA, tC)</name>	<id>3</id>
+            <name>(tcfa, tna, tal, tN, nA, nC)</name>	<id>4</id>
+            <name>(tcfa, tna, tal, nN, tA, tC)</name>	<id>5</id>
+            <name>(tcfa, tna, tal, nN, tA, nC)</name>	<id>6</id>
+            <name>(tcfa, tna, tal, nN, nA, tC)</name>	<id>7</id>
+            <name>(tcfa, tna, tal, nN, nA, nC)</name>	<id>8</id>
+            <name>(tcfa, tna, nal, tN, tA, tC)</name>	<id>9</id>
+            <name>(tcfa, tna, nal, tN, tA, nC)</name>	<id>10</id>
+            <name>(tcfa, tna, nal, tN, nA, tC)</name>	<id>11</id>
+            <name>(tcfa, tna, nal, tN, nA, nC)</name>	<id>12</id>
+            <name>(tcfa, tna, nal, nN, tA, tC)</name>	<id>13</id>
+            <name>(tcfa, tna, nal, nN, tA, nC)</name>	<id>14</id>
+            <name>(tcfa, tna, nal, nN, nA, tC)</name>	<id>15</id>
+            <name>(tcfa, tna, nal, nN, nA, nC)</name>	<id>16</id>
+        	<name>(tcfa, nna, tal, tN, tA, nC)</name>	<id>18</id>
+            <name>(tcfa, nna, tal, tN, nA, tC)</name>	<id>19</id>
+            <name>(tcfa, nna, tal, tN, nA, nC)</name>	<id>20</id>
+        	<name>(tcfa, nna, tal, nN, tA, nC)</name>	<id>22</id>
+            <name>(tcfa, nna, tal, nN, nA, tC)</name>	<id>23</id>
+            <name>(tcfa, nna, tal, nN, nA, nC)</name>	<id>24</id>
+            <name>(tcfa, nna, nal, tN, tA, tC)</name>	<id>25</id>
+            <name>(tcfa, nna, nal, tN, tA, nC)</name>	<id>26</id>
+            <name>(tcfa, nna, nal, tN, nA, nC)</name>	<id>28</id>
+        	<name>(tcfa, nna, nal, nN, nA, nC)</name>	<id>32</id>
+            <name>(ncfa, tna, tal, tN, tA, tC)</name>	<id>33</id>
+            <name>(ncfa, tna, tal, tN, tA, nC)</name>	<id>34</id>
+            <name>(ncfa, tna, tal, tN, nA, tC)</name>	<id>35</id>
+            <name>(ncfa, tna, tal, tN, nA, nC)</name>	<id>36</id>
+            <name>(ncfa, tna, tal, nN, tA, tC)</name>	<id>37</id>
+            <name>(ncfa, tna, tal, nN, tA, nC)</name>	<id>38</id>
+            <name>(ncfa, tna, tal, nN, nA, tC)</name>	<id>39</id>
+            <name>(ncfa, tna, tal, nN, nA, nC)</name>	<id>40</id>
+
+		</assignment>
+
+
+		<assignment>
+			<mass> 1  </mass>       
+            <name>(tcfa, nna, tal, tN, tA, tC)</name>	<id>17</id> %orig
+        	<name>(tcfa, nna, tal, nN, tA, tC)</name>	<id>21</id> %orig
+            <name>(tcfa, nna, nal, tN, nA, tC)</name>	<id>27</id> %orig
+            <name>(tcfa, nna, nal, nN, tA, tC)</name>	<id>29</id> %tamp
+            <name>(tcfa, nna, nal, nN, tA, nC)</name>	<id>30</id> %tamp
+        	<name>(tcfa, nna, nal, nN, nA, tC)</name>	<id>31</id> %orig
+            <name>(ncfa, tna, nal, tN, tA, tC)</name>	<id>41</id> %tamp
+            <name>(ncfa, tna, nal, tN, tA, nC)</name>	<id>42</id> %tamp
+	<name>(ncfa, tna, nal, tN, nA, tC)</name>	<id>43</id>
+	<name>(ncfa, tna, nal, tN, nA, nC)</name>	<id>44</id>
+
+		</assignment>
+
+
+
+	
+
+
+	<name>(ncfa, tna, nal, nN, tA, tC)</name>	<id>45</id>
+	<name>(ncfa, tna, nal, nN, tA, nC)</name>	<id>46</id>
+	<name>(ncfa, tna, nal, nN, nA, tC)</name>	<id>47</id>
+	<name>(ncfa, tna, nal, nN, nA, nC)</name>	<id>48</id>
+	<name>(ncfa, nna, tal, tN, tA, tC)</name>	<id>49</id>
+	<name>(ncfa, nna, tal, tN, tA, nC)</name>	<id>50</id>
+	<name>(ncfa, nna, tal, tN, nA, tC)</name>	<id>51</id>
+	<name>(ncfa, nna, tal, tN, nA, nC)</name>	<id>52</id>
+	<name>(ncfa, nna, tal, nN, tA, tC)</name>	<id>53</id>
+	<name>(ncfa, nna, tal, nN, tA, nC)</name>	<id>54</id>
+	<name>(ncfa, nna, tal, nN, nA, tC)</name>	<id>55</id>
+	<name>(ncfa, nna, tal, nN, nA, nC)</name>	<id>56</id>
+	<name>(ncfa, nna, nal, tN, tA, tC)</name>	<id>57</id>
+	<name>(ncfa, nna, nal, tN, tA, nC)</name>	<id>58</id>
+	<name>(ncfa, nna, nal, tN, nA, tC)</name>	<id>59</id>
+	<name>(ncfa, nna, nal, tN, nA, nC)</name>	<id>60</id>
+	<name>(ncfa, nna, nal, nN, tA, tC)</name>	<id>61</id>
+	<name>(ncfa, nna, nal, nN, tA, nC)</name>	<id>62</id>
+	<name>(ncfa, nna, nal, nN, nA, tC)</name>	<id>63</id>
+	<name>(ncfa, nna, nal, nN, nA, nC)</name>	<id>64</id>
+
+
+
+	}

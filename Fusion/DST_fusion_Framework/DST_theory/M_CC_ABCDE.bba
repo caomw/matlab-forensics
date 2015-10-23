@@ -1,0 +1,148 @@
+Name = 
+    M_C
+
+Model File=
+	ABCDE.mod
+
+K = 
+    0
+
+BBA = {
+		<assignment>
+			<mass>CT</mass>
+			<set>(tcfa, tna, tal, tN, tA, tC)</set>
+			<set>(tcfa, tna, tal, tN, nA, tC)</set>
+			<set>(tcfa, tna, tal, nN, tA, tC)</set>
+			<set>(tcfa, tna, tal, nN, nA, tC)</set>
+			<set>(tcfa, tna, nal, tN, tA, tC)</set>
+			<set>(tcfa, tna, nal, tN, nA, tC)</set>
+			<set>(tcfa, tna, nal, nN, tA, tC)</set>
+			<set>(tcfa, tna, nal, nN, nA, tC)</set>
+			<set>(tcfa, nna, tal, tN, tA, tC)</set>
+			<set>(tcfa, nna, tal, tN, nA, tC)</set>
+			<set>(tcfa, nna, tal, nN, tA, tC)</set>
+			<set>(tcfa, nna, tal, nN, nA, tC)</set>
+			<set>(tcfa, nna, nal, tN, tA, tC)</set>
+			<set>(tcfa, nna, nal, tN, nA, tC)</set>
+			<set>(tcfa, nna, nal, nN, tA, tC)</set>
+			<set>(tcfa, nna, nal, nN, nA, tC)</set>
+			<set>(ncfa, tna, tal, tN, tA, tC)</set>
+			<set>(ncfa, tna, tal, tN, nA, tC)</set>
+			<set>(ncfa, tna, tal, nN, tA, tC)</set>
+			<set>(ncfa, tna, tal, nN, nA, tC)</set>
+			<set>(ncfa, tna, nal, tN, tA, tC)</set>
+			<set>(ncfa, tna, nal, tN, nA, tC)</set>
+			<set>(ncfa, tna, nal, nN, tA, tC)</set>
+			<set>(ncfa, tna, nal, nN, nA, tC)</set>
+			<set>(ncfa, nna, tal, tN, tA, tC)</set>
+			<set>(ncfa, nna, tal, tN, nA, tC)</set>
+			<set>(ncfa, nna, tal, nN, tA, tC)</set>
+			<set>(ncfa, nna, tal, nN, nA, tC)</set>
+			<set>(ncfa, nna, nal, tN, tA, tC)</set>
+			<set>(ncfa, nna, nal, tN, nA, tC)</set>
+			<set>(ncfa, nna, nal, nN, tA, tC)</set>
+			<set>(ncfa, nna, nal, nN, nA, tC)</set>
+		</assignment>
+		<assignment>
+			<mass>CN</mass>
+			<set>(tcfa, tna, tal, tN, tA, nC)</set>
+			<set>(tcfa, tna, tal, tN, nA, nC)</set>
+			<set>(tcfa, tna, tal, nN, tA, nC)</set>
+			<set>(tcfa, tna, tal, nN, nA, nC)</set>
+			<set>(tcfa, tna, nal, tN, tA, nC)</set>
+			<set>(tcfa, tna, nal, tN, nA, nC)</set>
+			<set>(tcfa, tna, nal, nN, tA, nC)</set>
+			<set>(tcfa, tna, nal, nN, nA, nC)</set>
+			<set>(tcfa, nna, tal, tN, tA, nC)</set>
+			<set>(tcfa, nna, tal, tN, nA, nC)</set>
+			<set>(tcfa, nna, tal, nN, tA, nC)</set>
+			<set>(tcfa, nna, tal, nN, nA, nC)</set>
+			<set>(tcfa, nna, nal, tN, tA, nC)</set>
+			<set>(tcfa, nna, nal, tN, nA, nC)</set>
+			<set>(tcfa, nna, nal, nN, tA, nC)</set>
+			<set>(tcfa, nna, nal, nN, nA, nC)</set>
+			<set>(ncfa, tna, tal, tN, tA, nC)</set>
+			<set>(ncfa, tna, tal, tN, nA, nC)</set>
+			<set>(ncfa, tna, tal, nN, tA, nC)</set>
+			<set>(ncfa, tna, tal, nN, nA, nC)</set>
+			<set>(ncfa, tna, nal, tN, tA, nC)</set>
+			<set>(ncfa, tna, nal, tN, nA, nC)</set>
+			<set>(ncfa, tna, nal, nN, tA, nC)</set>
+			<set>(ncfa, tna, nal, nN, nA, nC)</set>
+			<set>(ncfa, nna, tal, tN, tA, nC)</set>
+			<set>(ncfa, nna, tal, tN, nA, nC)</set>
+			<set>(ncfa, nna, tal, nN, tA, nC)</set>
+			<set>(ncfa, nna, tal, nN, nA, nC)</set>
+			<set>(ncfa, nna, nal, tN, tA, nC)</set>
+			<set>(ncfa, nna, nal, tN, nA, nC)</set>
+			<set>(ncfa, nna, nal, nN, tA, nC)</set>
+			<set>(ncfa, nna, nal, nN, nA, nC)</set>
+		</assignment>
+		<assignment>
+			<mass>CD</mass>
+			<set>(tcfa, tna, tal, tN, tA, tC)</set>
+			<set>(tcfa, tna, tal, tN, nA, tC)</set>
+			<set>(tcfa, tna, tal, nN, tA, tC)</set>
+			<set>(tcfa, tna, tal, nN, nA, tC)</set>
+			<set>(tcfa, tna, nal, tN, tA, tC)</set>
+			<set>(tcfa, tna, nal, tN, nA, tC)</set>
+			<set>(tcfa, tna, nal, nN, tA, tC)</set>
+			<set>(tcfa, tna, nal, nN, nA, tC)</set>
+			<set>(tcfa, nna, tal, tN, tA, tC)</set>
+			<set>(tcfa, nna, tal, tN, nA, tC)</set>
+			<set>(tcfa, nna, tal, nN, tA, tC)</set>
+			<set>(tcfa, nna, tal, nN, nA, tC)</set>
+			<set>(tcfa, nna, nal, tN, tA, tC)</set>
+			<set>(tcfa, nna, nal, tN, nA, tC)</set>
+			<set>(tcfa, nna, nal, nN, tA, tC)</set>
+			<set>(tcfa, nna, nal, nN, nA, tC)</set>
+			<set>(ncfa, tna, tal, tN, tA, tC)</set>
+			<set>(ncfa, tna, tal, tN, nA, tC)</set>
+			<set>(ncfa, tna, tal, nN, tA, tC)</set>
+			<set>(ncfa, tna, tal, nN, nA, tC)</set>
+			<set>(ncfa, tna, nal, tN, tA, tC)</set>
+			<set>(ncfa, tna, nal, tN, nA, tC)</set>
+			<set>(ncfa, tna, nal, nN, tA, tC)</set>
+			<set>(ncfa, tna, nal, nN, nA, tC)</set>
+			<set>(ncfa, nna, tal, tN, tA, tC)</set>
+			<set>(ncfa, nna, tal, tN, nA, tC)</set>
+			<set>(ncfa, nna, tal, nN, tA, tC)</set>
+			<set>(ncfa, nna, tal, nN, nA, tC)</set>
+			<set>(ncfa, nna, nal, tN, tA, tC)</set>
+			<set>(ncfa, nna, nal, tN, nA, tC)</set>
+			<set>(ncfa, nna, nal, nN, tA, tC)</set>
+			<set>(ncfa, nna, nal, nN, nA, tC)</set>
+			<set>(tcfa, tna, tal, tN, tA, nC)</set>
+			<set>(tcfa, tna, tal, tN, nA, nC)</set>
+			<set>(tcfa, tna, tal, nN, tA, nC)</set>
+			<set>(tcfa, tna, tal, nN, nA, nC)</set>
+			<set>(tcfa, tna, nal, tN, tA, nC)</set>
+			<set>(tcfa, tna, nal, tN, nA, nC)</set>
+			<set>(tcfa, tna, nal, nN, tA, nC)</set>
+			<set>(tcfa, tna, nal, nN, nA, nC)</set>
+			<set>(tcfa, nna, tal, tN, tA, nC)</set>
+			<set>(tcfa, nna, tal, tN, nA, nC)</set>
+			<set>(tcfa, nna, tal, nN, tA, nC)</set>
+			<set>(tcfa, nna, tal, nN, nA, nC)</set>
+			<set>(tcfa, nna, nal, tN, tA, nC)</set>
+			<set>(tcfa, nna, nal, tN, nA, nC)</set>
+			<set>(tcfa, nna, nal, nN, tA, nC)</set>
+			<set>(tcfa, nna, nal, nN, nA, nC)</set>
+			<set>(ncfa, tna, tal, tN, tA, nC)</set>
+			<set>(ncfa, tna, tal, tN, nA, nC)</set>
+			<set>(ncfa, tna, tal, nN, tA, nC)</set>
+			<set>(ncfa, tna, tal, nN, nA, nC)</set>
+			<set>(ncfa, tna, nal, tN, tA, nC)</set>
+			<set>(ncfa, tna, nal, tN, nA, nC)</set>
+			<set>(ncfa, tna, nal, nN, tA, nC)</set>
+			<set>(ncfa, tna, nal, nN, nA, nC)</set>
+			<set>(ncfa, nna, tal, tN, tA, nC)</set>
+			<set>(ncfa, nna, tal, tN, nA, nC)</set>
+			<set>(ncfa, nna, tal, nN, tA, nC)</set>
+			<set>(ncfa, nna, tal, nN, nA, nC)</set>
+			<set>(ncfa, nna, nal, tN, tA, nC)</set>
+			<set>(ncfa, nna, nal, tN, nA, nC)</set>
+			<set>(ncfa, nna, nal, nN, tA, nC)</set>
+			<set>(ncfa, nna, nal, nN, nA, nC)</set>
+		</assignment>
+	}

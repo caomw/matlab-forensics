@@ -1,5 +1,5 @@
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain','FirstChallengeTest','FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'VIPP2'}; %{'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain','FirstChallengeTest','FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 OutputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved/';

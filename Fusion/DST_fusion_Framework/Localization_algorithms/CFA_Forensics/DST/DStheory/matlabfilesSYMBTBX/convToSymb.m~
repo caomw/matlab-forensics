@@ -1,0 +1,7 @@
+function[symexp, varlist] = convToSymb(string)
+%Take a string and convert it in a symbolic expression
+s = syms(string);
+res = s.findsym;
+vars = regexp(res, ',', 'split');
+
+end

@@ -1,0 +1,24 @@
+Name = 
+    M_c
+
+Model File=
+    c.mod
+
+K = 
+    0
+
+BBA = {
+		<assignment>
+            <mass>cfaT</mass>
+            <set>(tcfa)</set>
+        </assignment>
+		<assignment>
+            <mass>cfaN</mass>
+            <set>(ncfa)</set>
+        </assignment>
+		<assignment>
+            <mass>cfaD</mass>
+            <set>(tcfa)</set>
+            <set>(ncfa)</set>
+        </assignment>
+}

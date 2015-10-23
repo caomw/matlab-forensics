@@ -1,11 +1,11 @@
 rng('shuffle');
-Algorithms={'08'} %{'01' '02' '04' '05' '06' '07' '10' '14'};% '08', '12', '16'
+Algorithms={'16'} %{'01' '02' '04' '05' '06' '07' '10' '14'};% '08', '12', '16'
 %HistSteps=[5];
 
 HistSize=500;
 
 load('RandomSamplingStatistics.mat');
-InputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/AlgorithmOutput/';
+InputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
 
 
 for AlgInd=1:length(Algorithms)
@@ -19,7 +19,7 @@ for AlgInd=1:length(Algorithms)
     
     
         RandomizedIndex=randperm(length(Statistics.(['A' Algorithm]).List));
-        for File=1:2000 %length(RandomizedIndex)
+        for File=1:10000 %length(RandomizedIndex)
             FileInd=RandomizedIndex(File);
             L=load(Statistics.(['A' Algorithm]).List{FileInd});
             pause(0.05);

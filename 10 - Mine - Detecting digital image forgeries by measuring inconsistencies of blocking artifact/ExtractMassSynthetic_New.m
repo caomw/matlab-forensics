@@ -1,16 +1,19 @@
+clear all
+
 AlgorithmName='10';
 
-Qualities=75 %[0 100 95 85 75 65];
-Rescales=[true];
+Qualities=[0 100 95 85 75 65];
+Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'VIPP2'} %'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
 OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
 MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
 load('../Datasets_Linux.mat');
+
 
 
 for Quality=Qualities

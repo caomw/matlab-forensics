@@ -1,0 +1,1538 @@
+Name =
+	 M_A ++ M_N ++ M_c ++ M_na ++ M_al ++ M_TAB
+
+ModelFile=
+	 ABCDE.mod
+
+K=
+	 AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT
+
+BBA = {
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alT*cT*naD + AD*NT*alT*cT*naN + AT*NT*alD*cT*naD + AT*NT*alD*cT*naN + AT*NT*alT*cT*naD + AT*NT*alT*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alD*cD*naT + AT*ND*alN*cD*naT + AT*ND*alD*cN*naT + AT*ND*alN*cN*naT + AT*NT*alN*cD*naD + AT*NT*alD*cD*naT + AT*NT*alN*cD*naT + AT*NT*alN*cN*naD + AT*NT*alD*cN*naT + AT*NT*alN*cN*naT)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alT*cN*naD + AD*NT*alT*cN*naN + AT*NT*alD*cN*naN + AT*NT*alT*cN*naD + AT*NT*alT*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*NT*alD*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alT*cD*naD + AD*NT*alT*cD*naN + AT*NT*alD*cD*naN + AT*NT*alT*cD*naD + AT*NT*alT*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*NT*alD*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alT*cT*naD + AD*NN*alT*cT*naN + AT*NN*alT*cT*naD + AT*NN*alT*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alN*cT*naD + AT*ND*alN*cT*naN + AT*NN*alN*cT*naD + AT*NN*alN*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*NN*alD*cT*naD + AT*NN*alD*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alT*cN*naD + AD*NN*alT*cN*naN + AT*NN*alT*cN*naD + AT*NN*alT*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alN*cN*naN + AT*NN*alN*cN*naD + AT*NN*alN*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*NN*alD*cN*naD + AT*NN*alD*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alT*cD*naD + AD*NN*alT*cD*naN + AT*NN*alT*cD*naD + AT*NN*alT*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alN*cD*naN + AT*NN*alN*cD*naD + AT*NN*alN*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*NN*alD*cD*naD + AT*NN*alD*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alT*cT*naD + AD*ND*alT*cT*naN + AT*ND*alT*cT*naD + AT*ND*alT*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alD*cT*naD + AT*ND*alD*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alT*cN*naD + AD*ND*alT*cN*naN + AT*ND*alT*cN*naD + AT*ND*alT*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alD*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alN*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alD*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alT*cD*naD + AD*ND*alT*cD*naN + AT*ND*alT*cD*naD + AT*ND*alT*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alD*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alN*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AT*ND*alD*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alN*cT*naD + AD*NT*alN*cT*naN + AN*NT*alD*cT*naD + AN*NT*alD*cT*naN + AN*NT*alN*cT*naD + AN*NT*alN*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*ND*alD*cD*naT + AN*ND*alN*cD*naT + AN*ND*alD*cN*naT + AN*ND*alN*cN*naT + AN*NT*alD*cD*naT + AN*NT*alN*cD*naT + AN*NT*alD*cN*naT + AN*NT*alN*cN*naT)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alN*cN*naN + AN*NT*alD*cN*naN + AN*NT*alN*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*NT*alD*cN*naD + AN*NT*alN*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alN*cD*naN + AN*NT*alD*cD*naN + AN*NT*alN*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*NT*alD*cD*naD + AN*NT*alN*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*NN*alD*cT*naD + AN*NN*alD*cT*naN + AN*NN*alN*cT*naD + AN*NN*alN*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*NN*alD*cN*naD + AN*NN*alD*cN*naN + AN*NN*alN*cN*naD + AN*NN*alN*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*NN*alD*cD*naD + AN*NN*alD*cD*naN + AN*NN*alN*cD*naD + AN*NN*alN*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*ND*alD*cT*naD + AN*ND*alD*cT*naN + AN*ND*alN*cT*naD + AN*ND*alN*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*ND*alD*cN*naN + AN*ND*alN*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*ND*alD*cN*naD + AN*ND*alN*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*ND*alD*cD*naN + AN*ND*alN*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AN*ND*alD*cD*naD + AN*ND*alN*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alD*cT*naD + AD*NT*alD*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alD*cD*naT + AD*ND*alN*cD*naT + AD*ND*alD*cN*naT + AD*ND*alN*cN*naT + AD*NT*alD*cD*naT + AD*NT*alN*cD*naT + AD*NT*alD*cN*naT + AD*NT*alN*cN*naT)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alD*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alN*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alD*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alD*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alN*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NT*alD*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alN*cT*naD + AD*NN*alN*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alD*cT*naD + AD*NN*alD*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alN*cN*naD + AD*NN*alN*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alD*cN*naD + AD*NN*alD*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alN*cD*naD + AD*NN*alN*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*NN*alD*cD*naD + AD*NN*alD*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alN*cT*naD + AD*ND*alN*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alD*cT*naD + AD*ND*alD*cT*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alN*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alD*cN*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alN*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alD*cN*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alN*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alD*cD*naN)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alN*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>0</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+		</assignment>
+
+		<assignment>
+			<mass>-(AD*ND*alD*cD*naD)/(AD*ND*alT*cD*naT + AD*NN*alD*cD*naT + AN*ND*alT*cD*naD + AD*NN*alN*cD*naT + AN*ND*alT*cD*naN + AD*ND*alT*cN*naT + AD*NN*alT*cD*naT + AN*ND*alT*cD*naT + AD*ND*alD*cT*naT + AD*ND*alN*cT*naT + AD*ND*alT*cT*naT + AD*NT*alT*cD*naT + AT*ND*alT*cD*naT + AD*NN*alD*cN*naT + AN*ND*alT*cN*naD + AN*NN*alD*cD*naT + AN*NN*alT*cD*naD + AD*NN*alN*cN*naT + AN*ND*alT*cN*naN + AN*NN*alN*cD*naT + AN*NN*alT*cD*naN + AD*NN*alT*cN*naT + AN*ND*alT*cN*naT + AN*NN*alT*cD*naT + AD*NN*alD*cT*naT + AN*ND*alD*cT*naT + AN*ND*alT*cT*naD + AN*NT*alT*cD*naD + AT*NN*alD*cD*naT + AD*NN*alN*cT*naT + AN*ND*alN*cT*naT + AN*ND*alT*cT*naN + AN*NT*alT*cD*naN + AT*NN*alN*cD*naT + AD*NN*alT*cT*naT + AD*NT*alT*cN*naT + AN*ND*alT*cT*naT + AN*NT*alT*cD*naT + AT*ND*alT*cN*naT + AT*NN*alT*cD*naT + AN*NN*alD*cN*naT + AN*NN*alT*cN*naD + AN*NN*alN*cN*naT + AN*NN*alT*cN*naN + AN*NN*alT*cN*naT + AD*NT*alD*cT*naT + AT*ND*alD*cT*naT + AT*NT*alN*cD*naN + AD*NT*alN*cT*naT + AT*ND*alN*cT*naT + AD*NT*alT*cT*naT + AT*ND*alT*cT*naT + AT*NT*alT*cD*naT + AN*NN*alD*cT*naT + AN*NN*alT*cT*naD + AN*NT*alT*cN*naD + AT*NN*alD*cN*naT + AN*NN*alN*cT*naT + AN*NN*alT*cT*naN + AN*NT*alT*cN*naN + AT*NN*alN*cN*naT + AN*NN*alT*cT*naT + AN*NT*alT*cN*naT + AT*NN*alT*cN*naT + AN*NT*alD*cT*naT + AN*NT*alT*cT*naD + AT*NN*alD*cT*naT + AT*NT*alN*cN*naN + AN*NT*alN*cT*naT + AN*NT*alT*cT*naN + AT*NN*alN*cT*naT + AN*NT*alT*cT*naT + AT*NN*alT*cT*naT + AT*NT*alT*cN*naT + AT*NT*alN*cT*naD + AT*NT*alD*cT*naT + AT*NT*alN*cT*naN + AT*NT*alN*cT*naT + AT*NT*alT*cT*naT - 1)</mass>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+
+}

@@ -1,0 +1,89 @@
+Name = 
+    M_TAB
+
+Model File=
+	ABCDE.mod
+
+K = 
+    0
+
+BBA = {
+
+		<assignment>
+			<mass> 0  </mass>       
+            <set>(tcfa, tna, tal, tN, tA, tC)</set>	%<id>1</id>
+            <set>(tcfa, tna, tal, tN, tA, nC)</set>	%<id>2</id>
+            <set>(tcfa, tna, tal, tN, nA, tC)</set>	%<id>3</id>
+            <set>(tcfa, tna, tal, tN, nA, nC)</set>	%<id>4</id>
+            <set>(tcfa, tna, tal, nN, tA, tC)</set>	%<id>5</id>
+            <set>(tcfa, tna, tal, nN, tA, nC)</set>	%<id>6</id>
+            <set>(tcfa, tna, tal, nN, nA, tC)</set>	%<id>7</id>
+            <set>(tcfa, tna, tal, nN, nA, nC)</set>	%<id>8</id>
+            <set>(tcfa, tna, nal, tN, tA, tC)</set>	%<id>9</id>
+            <set>(tcfa, tna, nal, tN, tA, nC)</set>	%<id>10</id>
+            <set>(tcfa, tna, nal, tN, nA, tC)</set>	%<id>11</id>
+            <set>(tcfa, tna, nal, tN, nA, nC)</set>	%<id>12</id>
+            <set>(tcfa, tna, nal, nN, tA, tC)</set>	%<id>13</id>
+            <set>(tcfa, tna, nal, nN, tA, nC)</set>	%<id>14</id>
+            <set>(tcfa, tna, nal, nN, nA, tC)</set>	%<id>15</id>
+            <set>(tcfa, tna, nal, nN, nA, nC)</set>	%<id>16</id>
+        	<set>(tcfa, nna, tal, tN, tA, nC)</set>	%<id>18</id>
+            <set>(tcfa, nna, tal, tN, nA, tC)</set>	%<id>19</id>
+            <set>(tcfa, nna, tal, tN, nA, nC)</set>	%<id>20</id>
+        	<set>(tcfa, nna, tal, nN, tA, nC)</set>	%<id>22</id>
+            <set>(tcfa, nna, tal, nN, nA, tC)</set>	%<id>23</id>
+            <set>(tcfa, nna, tal, nN, nA, nC)</set>	%<id>24</id>
+            <set>(tcfa, nna, nal, tN, tA, tC)</set>	%<id>25</id>
+            <set>(tcfa, nna, nal, tN, tA, nC)</set>	%<id>26</id>
+            <set>(tcfa, nna, nal, tN, nA, nC)</set>	%<id>28</id>
+        	<set>(tcfa, nna, nal, nN, nA, nC)</set>	%<id>32</id>
+            <set>(ncfa, tna, tal, tN, tA, tC)</set>	%<id>33</id>
+            <set>(ncfa, tna, tal, tN, tA, nC)</set>	%<id>34</id>
+            <set>(ncfa, tna, tal, tN, nA, tC)</set>	%<id>35</id>
+            <set>(ncfa, tna, tal, tN, nA, nC)</set>	%<id>36</id>
+            <set>(ncfa, tna, tal, nN, tA, tC)</set>	%<id>37</id>
+            <set>(ncfa, tna, tal, nN, tA, nC)</set>	%<id>38</id>
+            <set>(ncfa, tna, tal, nN, nA, tC)</set>	%<id>39</id>
+            <set>(ncfa, tna, tal, nN, nA, nC)</set>	%<id>40</id>
+            <set>(ncfa, tna, nal, nN, tA, tC)</set>	%<id>45</id>
+            <set>(ncfa, tna, nal, nN, tA, nC)</set>	%<id>46</id>
+            <set>(ncfa, tna, nal, nN, nA, tC)</set>	%<id>47</id>
+            <set>(ncfa, tna, nal, nN, nA, nC)</set>	%<id>48</id>
+        	<set>(ncfa, nna, tal, tN, tA, tC)</set>	%<id>49</id>
+            <set>(ncfa, nna, tal, tN, nA, tC)</set>	%<id>51</id>
+            <set>(ncfa, nna, tal, tN, nA, nC)</set>	%<id>52</id>
+            <set>(ncfa, nna, tal, nN, nA, tC)</set>	%<id>55</id>
+            <set>(ncfa, nna, tal, nN, nA, nC)</set>	%<id>56</id>
+            <set>(ncfa, nna, nal, tN, tA, tC)</set>	%<id>57</id>
+            <set>(ncfa, nna, nal, tN, tA, nC)</set>	%<id>58</id>
+            <set>(ncfa, nna, nal, tN, nA, tC)</set>	%<id>59</id>
+
+		</assignment>
+
+
+		<assignment>
+			<mass> 1  </mass>       
+            <set>(tcfa, nna, tal, tN, tA, tC)</set>	%<id>17</id> %orig
+        	<set>(tcfa, nna, tal, nN, tA, tC)</set>	%<id>21</id> %orig
+            <set>(tcfa, nna, nal, tN, nA, tC)</set>	%<id>27</id> %orig
+            <set>(tcfa, nna, nal, nN, tA, tC)</set>	%<id>29</id> %tamp
+            <set>(tcfa, nna, nal, nN, tA, nC)</set>	%<id>30</id> %tamp
+        	<set>(tcfa, nna, nal, nN, nA, tC)</set>	%<id>31</id> %orig
+            <set>(ncfa, tna, nal, tN, tA, tC)</set>	%<id>41</id> %tamp
+            <set>(ncfa, tna, nal, tN, tA, nC)</set>	%<id>42</id> %tamp
+            <set>(ncfa, tna, nal, tN, nA, tC)</set>	%<id>43</id> %tamp
+            <set>(ncfa, tna, nal, tN, nA, nC)</set>	%<id>44</id> %tamp
+        	<set>(ncfa, nna, tal, tN, tA, nC)</set>	%<id>50</id> %orig
+            <set>(ncfa, nna, tal, nN, tA, tC)</set>	%<id>53</id> %orig
+            <set>(ncfa, nna, tal, nN, tA, nC)</set>	%<id>54</id> %orig
+            <set>(ncfa, nna, nal, tN, nA, nC)</set>	%<id>60</id> %orig
+            <set>(ncfa, nna, nal, nN, tA, tC)</set>	%<id>61</id> %tamp
+            <set>(ncfa, nna, nal, nN, tA, nC)</set>	%<id>62</id> %tamp
+            <set>(ncfa, nna, nal, nN, nA, tC)</set>	%<id>63</id> %tamp
+            <set>(ncfa, nna, nal, nN, nA, nC)</set>	%<id>64</id> %orig
+
+		</assignment>
+
+
+
+	}

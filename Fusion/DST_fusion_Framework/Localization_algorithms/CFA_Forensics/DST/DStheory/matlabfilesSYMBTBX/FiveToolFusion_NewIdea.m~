@@ -1,0 +1,209 @@
+function[BelT, PlT, BelN, PlN, Confl] = FiveToolFusion_NewIdea(A, Ra, B, Rb, C, Rc, D, Rd, E, Re, table)%, plotFlag)
+%CASO DI STUDIO: vedi M_5tools_ABCDE.bba
+%A: detection del tool Double JPEG (Ta)
+%B: detection del tool Single JPEG (Tb)
+%C: detection del tool JPEG Ghost (Tc)
+%D: detection del tool JPNA (Td)
+%E: detecion del tool JPDQ (Te)
+
+%Ra, Rb, Rc, Rd, Re confidenza a priori sui tool
+%plotFlag: set to 'd' if you want to display the image, 's' to save figure,
+%'n' to disable
+%warning off
+%Mapping from A -> AT,AN,ATN and the same for other variables...
+%Mapping from Ra -> AR,AU,ARU and the same for other variables...
+
+AR = Ra;
+AN = 1-Ra;
+BR = Rb;
+BN = 1-Rb;
+CR = Rc;
+CN = 1-Rc;
+DR = Rd;
+DN = 1-Rd;
+ER = Re;
+EN = 1-Re;
+
+%assert( (D<=1 && Rd<=1 && S<=1 && Rs<=1 && G<=1 && Rg<=1), 'Impossible probability assignment!');
+
+% if nargin<7
+%     Th.DJPG = 0.5;
+%     Th.JPCH = 0.5;
+%     Th.JPGH = 0.4;
+%     Th.JPNA = 0.4;
+%     Th.JPDQ = 0.5;
+% else
+%     Th.DJPG = ThDSG(1);
+%     Th.JPCH = ThDSG(2);
+%     Th.JPGH = ThDSG(3);
+%     Th.JPNA = ThDSG(4);
+%     Th.JPDQ = ThDSG(5);
+% end
+
+% CURVES FOR INTERNAL-REGION-ONLY APPROACH
+%     [AT, AN, ATN] = responseMapper_TRAP(A, 0, 0.5, 0.9,  1, 0.45);
+%     [BT, BN, BTN] = responseMapper_TRAP(B, 0, 0.4, 0.95, 1, 0.45);
+%     [CT, CN, CTN] = responseMapper_TRAP(C, 0, 0.35, 0.6, 1, 0.45);
+%     [DT, DN, DTN] = responseMapper_TRAP(D, 0, 0.28, 0.4, 1, 0.1);
+%     [ET, EN, ETN] = responseMapper_TRAP(E, 0, 0.63, 0.87,1, 0.1);
+
+  display('Using TRAPEZOID-based BBA assignment');
+% CURVES FOR DIFFERENTIAL APPROACH
+   [AT, AN, ATN] = responseMapper_TRAP(A, 0, 0.2, 0.7,  1, 0.5);    
+   [BT, BN, BTN] = responseMapper_TRAP(B, 0, 0.3, 0.90, 1, 0.45);
+%moredoubt    [BT, BN, BTN] = responseMapper_TRAP(B, 0, 0.2, 0.80, 1, 0.1);    
+   [CT, CN, CTN] = responseMapper_TRAP(C, 0, 0.35, 0.6, 1, 0.45);
+   [DT, DN, DTN] = responseMapper_TRAP(D, 0, 0.20, 0.35, 1, 0.1);        
+   [ET, EN, ETN] = responseMapper_TRAP(E, 0, 0.1, 0.2,1, 0.1);
+%moredoubt    [ET, EN, ETN] = responseMapper_TRAP(E, 0, 0.1, 0.7,1, 0.1);
+%     
+%  display('Using DS built BBA assignment');
+% % % CURVES TRAINED ON DIFFERENTIAL APPROACH
+% % %trainedFile = '/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_gT=100_gN=200_NN=16';
+% % trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_gT=200_gN=100_NN=16.mat';
+% % trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_gammaT=100.000_gammaN=100.000_NN=32.000.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/FILTERED_trainedFuzzyCurves_gammaT=100.000_gammaN=100.000_NN=32.000.mat';
+% % trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_gammaT=100.000_gammaN=100.000_NN=16.000.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=_0.8_gammaT=100_gammaN=100_NN=032.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.80_gammaT=010_gammaN=010_NN=032.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.80_gammaT=050_gammaN=050_NN=032.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.80_gammaT=200_gammaN=200_NN=032.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.95_gammaT=200_gammaN=200_NN=032.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.80_gammaT=200_gammaN=200_NN=004.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.85_gammaT=400_gammaN=400_NN=004.mat';
+% % trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.85_gammaT=200_gammaN=200_NN=008.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.85_gammaT=200_gammaN=200_NN=008.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.99_gammaT=200_gammaN=200_NN=008.mat';
+%*trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=Y_alfa=0.85_gammaT=400_gammaN=400_NN=004.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=N_alfa=0.85_gammaT=400_gammaN=400_NN=004.mat';
+% %trainedFile ='/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/matlabfiles/trainedFuzzyCurves_filt=N_alfa=0.70_gammaT=200_gammaN=200_NN=004.mat';
+%
+%TOOLB: %trainedFile ='/Users/marco/Dropbox/Universita/FORENSIC/DECISION FUSION/trainer/trainedCurves_filt=Y_pinch=Y_reduced=Y_a=0.90_gT=005_gN=005_NN=012.mat';
+trainedFile ='/Users/marco/Dropbox/Universita/FORENSIC/DECISION FUSION/trainer/trainedCurves_filt=Y_pinch=Y_reduced=Y_a=0.65_gT=025_gN=025_NN=010.mat'; 
+
+%trainedFile ='./trainer/pinch_then_filt/trainedCurves_filt=Y_pinch=Y_reduced=Y_a=0.65_gT=025_gN=025_NN=006.mat';%TOP!!
+load(trainedFile);
+AT = XT.A(round(A*100+1)); AN = XN.A(round(A*100+1)); ATN = XTN.A(round(A*100+1)); 
+BT = XT.B(round(B*100+1)); BN = XN.B(round(B*100+1)); BTN = XTN.B(round(B*100+1)); 
+CT = XT.C(round(C*100+1)); CN = XN.C(round(C*100+1)); CTN = XTN.C(round(C*100+1)); 
+%DT = XT.D(round(D*100+1)); DN = XN.D(round(D*100+1)); DTN = XTN.D(round(D*100+1)); 
+%ET = XT.E(round(E*100+1)); EN = XN.E(round(E*100+1)); ETN = XTN.E(round(E*100+1)); 
+
+trainedFile ='/Users/marco/Dropbox/Universita/FORENSIC/DECISION FUSION/trainer/trainedCurves_filt=Y_pinch=Y_reduced=Y_a=0.65_gT=005_gN=005_NN=012.mat'; 
+DT = XT.D(round(D*100+1)); DN = XN.D(round(D*100+1)); DTN = XTN.D(round(D*100+1)); 
+ET = XT.E(round(E*100+1)); EN = XN.E(round(E*100+1)); ETN = XTN.E(round(E*100+1)); 
+
+%display('Using Cumulant-Based BBA assignment');
+%trainedFile = 'trainedFile ='/Users/marco/Dropbox/Universita/FORENSIC/DECISION FUSION/trainer/trainer/trainedCurves_filt=Y_pinch=Y_a=0.90_gT=005_gN=005_NN=016.mat'; ';
+%load(trainedFile);
+%AT = XT.A(round(A*100+1)); AN = XN.A(round(A*100+1)); ATN = XTN.A(round(A*100+1)); 
+%BT = XT.B(round(B*100+1)); BN = XN.B(round(B*100+1)); BTN = XTN.B(round(B*100+1)); 
+%CT = XT.C(round(C*100+1)); CN = XN.C(round(C*100+1)); CTN = XTN.C(round(C*100+1)); 
+%DT = XT.D(round(D*100+1)); DN = XN.D(round(D*100+1)); DTN = XTN.D(round(D*100+1)); 
+%ET = XT.E(round(E*100+1)); EN = XN.E(round(E*100+1)); ETN = XTN.E(round(E*100+1)); 
+
+CA = (1 - (AR .* AT + AR .* AN));
+CB = (1 - (BR .* BT + BR .* BN));
+CC = (1 - (CR .* CT + CR .* CN));
+CD = (1 - (DR .* DT + DR .* DN));
+CE = (1 - (ER .* ET + ER .* EN));
+
+%BBA = BBAparser('ABCDE_Tab.bba');
+
+%table = 'standard';
+%table = 'soft';
+if nargin<11
+    table='standard';
+end
+
+switch lower(table)
+    case 'standard'
+%       BBA = BBAparser('/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/DStheory/TIFS/5tools/ABCDE_Tab.bba');
+ 
+try
+    load('active_BBAs/ABCDE_Tab.mat');
+catch
+    BBA = BBAparser('./active_BBAs/ABCDE_Tab.bba');
+    save('active_BBAs/ABCDE_Tab.mat','BBA');
+end
+       %BBA = BBAparser('/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/DStheory/TIFS/5tools/ABCDE_Tab_Yag.bba');
+        BelT = eval(getBelief(BBA, ...
+            {...
+            '(ta, tb, tc)';...
+            '(ta, nb, nc)';...
+            '(na, tb, tc)';...
+            '(na, nb, tc)';...
+            }));
+        BelN = eval(getBelief(BBA, ...
+            {...
+            '(na, nb, nc)';...
+            }));              
+
+    case 'soft'
+        TR=0.5;
+        TN=0.5;
+        BBA = BBAparser('/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/DStheory/TIFS/5toolsST/ABCDE_ST_Tab.bba');        
+        BelT = eval(getBelief(BBA, ...
+            {...
+            '(ta, tb, tc)';...
+            '(ta, nb, nc)';...
+            '(na, tb, tc)';...
+            '(na, nb, tc)';...
+            '(na, tb, nc)';...            
+            '(ta, tb, nc)';...            
+            '(ta, nb, tc)';...            
+            }));
+        BelN = eval(getBelief(BBA, ...
+            {...
+            '(na, nb, nc)';...
+            }));     
+        
+    case 'none'
+        BBA = BBAparser('/Users/marco/Documents/Universita/Lavoro/Forensic/Decision Fusion/TIFS/DStheory/TIFS/5toolsNoTable/ABCDE_NoTab.bba');        
+        BelT = eval(getBelief(BBA, ...
+            {...
+            '(ta, tb, tc)';...
+            '(ta, nb, nc)';...
+            '(na, tb, tc)';...
+            '(na, nb, tc)';...
+            '(na, tb, nc)';...            
+            '(ta, tb, nc)';...            
+            '(ta, nb, tc)';...            
+            }));
+        BelN = eval(getBelief(BBA, ...
+            {...
+            '(na, nb, nc)';...
+            }));   
+end
+
+PlT = 1 - BelN;
+
+PlN = 1 - BelT;
+Confl = eval(BBA.K);
+% fprintf('--------- Forensic_ICIP.m ---------\n');
+% display(['Conflict: ',num2str(1-K)]);
+% fprintf('Belief-Plausibility ranges are:\n');
+% display(['T = [',num2str(BelT,3),' , ',num2str(PlT,3),']']);
+% display(['N = [',num2str(BelN,3),' , ',num2str(PlN,3),']']);
+% if nargin>7 && (strcmpi(plotFlag,'d')||strcmpi(plotFlag,'s'))
+%     h=bar('v6',[BelT PlT; BelN PlN],'group');
+%     set(gca,'XTickLabel',['T';'N']);
+%     set(gca,'YLim',[0 1]);
+%     legend('Belief', 'Plausibility');
+%     title({['D:',num2str(D),'   S:',num2str(S),'   G:',num2str(G)];['Rd:',num2str(Rd),'   Rs:',num2str(Rs),'   Rg:',num2str(Rg)];['--> Conflict = ', num2str(1-K)]},'FontSize',12,'FontWeight','bold');
+%     try
+%         set(h(1),'facecolor',[K 0 0])
+%         set(h(2),'facecolor',[0 0 K])
+%         set(h(3),'facecolor',[K 0 0])
+%         set(h(4),'facecolor',[0 0 K])
+%     catch
+%     end
+%     %display(['Is tampered: ',num2str(BelT*K)]);
+%     if strcmpi(plotFlag,'s')
+%         file_name= sprintf('D_%1.2f__S_%1.2f__G_%1.2f__Rd_%1.2f__Rs_%1.2f__Rg_%1.2f',[D S G Rd Rs Rg]);
+%         saveas(gca, fullfile('images',['DSMODEL_', file_name, '.png']), 'png');
+%     end
+% end
+
+end
+

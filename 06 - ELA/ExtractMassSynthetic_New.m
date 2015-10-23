@@ -1,10 +1,11 @@
+clear all;
 AlgorithmName='06';
 
-Qualities=0%[0 100 95 85 75 65];
+Qualities=[0 100 95 85 75 65];
 Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'FirstChallengeTrain'};{'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'VIPP2'};%{'FirstChallengeTrain','Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';

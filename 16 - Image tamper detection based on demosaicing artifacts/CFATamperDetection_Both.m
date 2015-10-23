@@ -1,7 +1,5 @@
 function Result=CFATamperDetection_Both(im,NoiseThresh)
     
-
-    
     if nargin<2
         NoiseThresh=1;
     end
@@ -19,6 +17,13 @@ function Result=CFATamperDetection_Both(im,NoiseThresh)
     %block size
     W1=16;
     W2=96;
+    
+    if size(im,1)<W2 | size(im,2)<W2
+        Result=zeros([size(im,1), size(im,2)]);
+        return
+    end
+
+    
     W2Overlap=round(W2/2);
     
     GChannel=double(im(:,:,2));

@@ -1,0 +1,20 @@
+function[extBBA] = extendBBA(BBA, new_name, new_model)
+    extBBA.Div = BBA.Div;
+    extBBA.name = new_name;
+    BBA.model = new_model;
+    
+    assgn = fieldnames(BBA.assignments);
+    masklen = length(assgn{1}(2:end));
+    for i=1:numel(assgn)
+        for w=1:length(BBA_ABC.model.EventList)
+            %retrieve event name
+             if strcmpiis(assgn{i}(2:masklen+1), BBA_ABC.model.EventList(w).EventMask
+        end
+        for el=1:length(new_model.EventList)
+
+            if strcmpi(assgn{i}(2:masklen+1),new_model.EventList(el).EventMask(1:masklen))
+                extBBA.assignments.(['s' new_model.EventList(el).EventMask(1:masklen)]) = BBA.assignments.(assgn{i});
+            end
+        end
+    end
+end

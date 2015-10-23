@@ -1,0 +1,17 @@
+%This script executes the Fusion Framework on a set of images saved in the
+%directory tamper_images
+if ispc
+    directory='tamper_images\';
+else
+    directory='tamper_images/';    
+end
+
+%The fusion framework function
+fusion_framework(directory);
+
+%threshold of the filter
+thresh=0.7;
+
+%The segmentation module (user can modify the filter type by writing 'median'
+%instead of 'mean')
+segmentation_module(directory,'mean');

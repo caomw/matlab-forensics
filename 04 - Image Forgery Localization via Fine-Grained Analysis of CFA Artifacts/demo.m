@@ -1,4 +1,4 @@
-function demo( im )
+function Result=demo( im )
     %DEMO Summary of this function goes here
     %   Detailed explanation goes here
     % dimension of statistics
@@ -15,7 +15,7 @@ function demo( im )
         [map, stat] = CFAloc(im, bayer, Nb(j),Ns);
         figure;
         imagesc(map);
-        
+        Result{j}=map;
     end
     
 end

@@ -1,3 +1,5 @@
+clear all;
+
 AlgorithmName='08';
 
 Datasets=load('../Datasets_Linux.mat');
@@ -12,6 +14,11 @@ OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/Alg
 Folders=dir(Datasets.MarkRealWorldSplices);
 Folders=Folders(3:end);
 
+
+% set parameters
+checkDisplacements=0;
+smoothFactor=1;
+
 for Folder=1:length(Folders)
     
     InputFolder=Folders(Folder).name;
@@ -23,8 +30,7 @@ for Folder=1:length(Folders)
     for fileExtension={'*.jpg','*.jpeg','*.png','*.gif','*.tif','*.bmp'}
         FileList=[FileList;dir([Datasets.MarkRealWorldSplices '/' Folders(Folder).name '/' fileExtension{1}])];
     end
-    
-    FileList=FileList(3:end);
+
     for fileInd=1:length(FileList)
         InputFileName=[Datasets.MarkRealWorldSplices '/' InputFolder '/' FileList(fileInd).name];
         OutputName=[strrep(InputFileName,InputOrigRoot,[OutputRoot AlgorithmName '/']) '.mat'];
@@ -36,13 +42,22 @@ for Folder=1:length(Folders)
                 save(OutputName, '-struct','Salv');
             else
                 im=CleanUpImage(InputFileName);
-                [Results.OutputX, Results.OutputY, Results.dispImages, Results.imin, Results.Qualities, Results.Mins]=Ghost(ImageIn, checkDisplacements, smoothFactor);                    
+                [Results.OutputX, Results.OutputY, Results.dispImages, Results.imin, Results.Qualities, Results.Mins]=Ghost(im, checkDisplacements, smoothFactor);                    
                 
                 Name=strrep(InputFileName,InputOrigRoot,'');
                 save(OutputName,'AlgorithmName','Results','Name','-v7.3');
             end
             if mod(fileInd,15)==0
                 disp(fileInd)
+            end
+        else
+            load(OutputName);
+            if length(Results.dispImages)==50
+                im=CleanUpImage(InputFileName);
+                [Results.OutputX, Results.OutputY, Results.dispImages, Results.imin, Results.Qualities, Results.Mins]=Ghost(im, checkDisplacements, smoothFactor);                    
+                Name=strrep(InputFileName,InputOrigRoot,'');
+                save(OutputName,'AlgorithmName','Results','Name','-v7.3');
+                disp(fileInd);
             end
         end
     end

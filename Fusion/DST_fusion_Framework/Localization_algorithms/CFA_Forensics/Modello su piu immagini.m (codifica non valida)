@@ -1,0 +1,14 @@
+ % verifica sul modello
+ 
+ N=512;          % dimensione dell'immagine
+ Nb=2;
+ N_window=7;     % dimensione della finestra di filtraggio
+ sigma=1;        % varianza del fltro
+ 
+ Nimmagini=15;
+ 
+data_con_CFA=istogrammi_con_CFA_stimata(Nimmagini,N);
+
+data_senza_CFA=istogrammi_senza_CFA_stimata(Nimmagini,N);
+
+

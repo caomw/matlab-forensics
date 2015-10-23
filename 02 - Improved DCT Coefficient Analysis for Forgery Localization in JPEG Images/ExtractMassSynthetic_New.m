@@ -1,10 +1,10 @@
 AlgorithmName='02';
 
-Qualities=75;%[0 100 95 85 75 65];
-Rescales=[true];
+Qualities=[0 100 95 85 75 65];
+Rescales=[false];
 
 Datasets=load('../Datasets_Linux.mat');
-DatasetList={'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'VIPP2'};%{'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
@@ -83,7 +83,7 @@ for Quality=Qualities
                             
                         end
                         
-                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result', 'q1table', 'alphatable','-v7.3');
+                        save(OutputName,'Quality','Rescale','BinMask','AlgorithmName','Result', 'q1table', 'alphatable','Name','-v7.3');
                     end
                     if mod(fileInd,15)==0
                         disp(fileInd)

@@ -1,0 +1,24 @@
+Name = 
+    M_C
+
+Model File=
+    C.mod
+
+K = 
+    0
+
+BBA = {
+		<assignment>
+            <mass>CT</mass>
+            <set>(tC)</set>
+        </assignment>
+		<assignment>
+            <mass>CN</mass>
+            <set>(nC)</set>
+        </assignment>
+		<assignment>
+            <mass>CD</mass>
+            <set>(tC)</set>
+            <set>(nC)</set>
+        </assignment>
+}

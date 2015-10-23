@@ -1,5 +1,6 @@
 function [b, eH, HorzMid, eV, VertMid, BlockDiff] = GetBlockGrid(im)
-
+    % Code from 2009 - 59 - Passive detection of doctored JPEG image via
+    % block artifact grid extraction 
     
     YCbCr=rgb2ycbcr(double(im));
     Y=YCbCr(:,:,1);

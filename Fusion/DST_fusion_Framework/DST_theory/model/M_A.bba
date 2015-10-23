@@ -1,0 +1,24 @@
+Name = 
+    M_A
+
+Model File=
+    A.mod
+
+K = 
+    0
+
+BBA = {
+		<assignment>
+            <mass>AT</mass>
+            <set>(tA)</set>
+        </assignment>
+		<assignment>
+            <mass>AN</mass>
+            <set>(nA)</set>
+        </assignment>
+		<assignment>
+            <mass>AD</mass>
+            <set>(tA)</set>
+            <set>(nA)</set>
+        </assignment>
+}

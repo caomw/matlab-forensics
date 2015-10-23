@@ -1,0 +1,24 @@
+Name = 
+    M_na
+
+Model File=
+    na.mod
+
+K = 
+    0
+
+BBA = {
+		<assignment>
+            <mass>naT</mass>
+            <set>(tna)</set>
+        </assignment>
+		<assignment>
+            <mass>naN</mass>
+            <set>(nna)</set>
+        </assignment>
+		<assignment>
+            <mass>naD</mass>
+            <set>(tna)</set>
+            <set>(nna)</set>
+        </assignment>
+}

@@ -1,3 +1,5 @@
+clear all;
+
 AlgorithmName='04';
 
 Datasets=load('../Datasets_Linux.mat');
@@ -26,7 +28,6 @@ for Folder=1:length(Folders)
         FileList=[FileList;dir([Datasets.MarkRealWorldSplices '/' Folders(Folder).name '/' fileExtension{1}])];
     end
     
-    FileList=FileList(3:end);
     for fileInd=1:length(FileList)
         InputFileName=[Datasets.MarkRealWorldSplices '/' InputFolder '/' FileList(fileInd).name];
         OutputName=[strrep(InputFileName,InputOrigRoot,[OutputRoot AlgorithmName '/']) '.mat'];

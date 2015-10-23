@@ -1,0 +1,24 @@
+Name = 
+    M_al
+
+Model File=
+    al.mod
+
+K = 
+    0
+
+BBA = {
+		<assignment>
+            <mass>alT</mass>
+            <set>(tal)</set>
+        </assignment>
+		<assignment>
+            <mass>alN</mass>
+            <set>(nal)</set>
+        </assignment>
+		<assignment>
+            <mass>alD</mass>
+            <set>(tal)</set>
+            <set>(nal)</set>
+        </assignment>
+}

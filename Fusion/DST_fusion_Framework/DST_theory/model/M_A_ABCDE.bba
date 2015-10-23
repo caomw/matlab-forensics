@@ -1,0 +1,84 @@
+Name = 
+    M_A
+
+Model File=
+	ABCDE.mod
+
+K = 
+    0
+
+BBA = {
+		<assignment>
+			<mass>AT</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+		</assignment>
+		<assignment>
+			<mass>AN</mass>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+		<assignment>
+			<mass>AD</mass>
+			<set>(tc, tna, tal, tN, tA)</set>
+			<set>(tc, tna, tal, nN, tA)</set>
+			<set>(tc, tna, nal, tN, tA)</set>
+			<set>(tc, tna, nal, nN, tA)</set>
+			<set>(tc, nna, tal, tN, tA)</set>
+			<set>(tc, nna, tal, nN, tA)</set>
+			<set>(tc, nna, nal, tN, tA)</set>
+			<set>(tc, nna, nal, nN, tA)</set>
+			<set>(nc, tna, tal, tN, tA)</set>
+			<set>(nc, tna, tal, nN, tA)</set>
+			<set>(nc, tna, nal, tN, tA)</set>
+			<set>(nc, tna, nal, nN, tA)</set>
+			<set>(nc, nna, tal, tN, tA)</set>
+			<set>(nc, nna, tal, nN, tA)</set>
+			<set>(nc, nna, nal, tN, tA)</set>
+			<set>(nc, nna, nal, nN, tA)</set>
+			<set>(tc, tna, tal, tN, nA)</set>
+			<set>(tc, tna, tal, nN, nA)</set>
+			<set>(tc, tna, nal, tN, nA)</set>
+			<set>(tc, tna, nal, nN, nA)</set>
+			<set>(tc, nna, tal, tN, nA)</set>
+			<set>(tc, nna, tal, nN, nA)</set>
+			<set>(tc, nna, nal, tN, nA)</set>
+			<set>(tc, nna, nal, nN, nA)</set>
+			<set>(nc, tna, tal, tN, nA)</set>
+			<set>(nc, tna, tal, nN, nA)</set>
+			<set>(nc, tna, nal, tN, nA)</set>
+			<set>(nc, tna, nal, nN, nA)</set>
+			<set>(nc, nna, tal, tN, nA)</set>
+			<set>(nc, nna, tal, nN, nA)</set>
+			<set>(nc, nna, nal, tN, nA)</set>
+			<set>(nc, nna, nal, nN, nA)</set>
+		</assignment>
+	}

@@ -1,7 +1,7 @@
 clear all
-List=dir('CompactReport*.mat');
+List=dir('CompactReport_*.mat');
 
-CorrectOrder=[1 2 4 5 7 8 3 6 9 10];
+CorrectOrder=[1 2 4 5 7 8 9 3 10 11 6];
 
 for AlgorithmInd=1:length(List)
     Algorithm=CorrectOrder(AlgorithmInd);
@@ -12,7 +12,7 @@ for AlgorithmInd=1:length(List)
             for Quality=1:6
                     NewSeries=R.Report.CompactCurves{1,Y}.(Fields{FieldInd}){Quality};
                     Ind=1;
-                    while NewSeries(2,Ind)>0.05
+                    while NewSeries(2,Ind)>0.01
                         Ind=Ind+1;
                     end
                     Output.Threshold{Y-1,FieldInd}(AlgorithmInd,Quality)=NewSeries(1,Ind);
@@ -23,5 +23,5 @@ for AlgorithmInd=1:length(List)
     end
 end
 
-save('FP05.mat','Output');
+save('FP0.mat','Output');
 

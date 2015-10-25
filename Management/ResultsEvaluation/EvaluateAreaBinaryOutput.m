@@ -72,7 +72,7 @@ for AlgorithmInd=1:length(AlgorithmNames)
                                 ResultMap{MapInd}=imresize(ResultMap{MapInd},size(Mask),'nearest');
                             end
                             if Dataset==2 || Dataset==4
-                                Mask=~Mask;
+                                MaskResize=~MaskResize;
                             end
                             
                             Names{InputFile}=Input.Name;

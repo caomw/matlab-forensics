@@ -1,7 +1,7 @@
 AuSp=[2 -1;1 +1;2 -1;1 +1;1 +1];
 
 
-List=dir('Report*.mat');
+List=dir('Report_*.mat');
 
 for ii=1:length(List)
     R=load(List(ii).name);
@@ -28,6 +28,11 @@ for ii=1:length(List)
                         end
                         Term=size(NewSeries,2)-2;
                     end
+                    if round(NewSeries(1,end)*100)==round(NewSeries(1,end-1)*100)
+                        NewSeries=NewSeries(:,1:end-1);
+                        TmpRange=TmpRange(1:end-1);
+                    end
+                    
                     R.Report.CompactCurves{X,Y}.(Fields{FieldInd}){Vert}=[TmpRange;NewSeries];
                 end
             end
@@ -54,6 +59,10 @@ for ii=1:length(List)
                             end
                             Term=size(NewSeries,2)-2;
                         end
+                        if round(NewSeries(1,end)*100)==round(NewSeries(1,end-1)*100)
+                            NewSeries=NewSeries(:,1:end-1);
+                            TmpRange=TmpRange(1:end-1);
+                        end                        
                         R.Report.CompactCurves{X,Y}.(Fields{FieldInd}){ceil(Vert/2)}=[TmpRange;NewSeries];
                     end
                 end

@@ -1,5 +1,5 @@
 clear all;
-AlgorithmNames={'08'}; %{'01' '02' '04' '05' '07' '10' '14' '16' };% '12' '08' {'01' '02' '04' '05' '07' '08' '10' '14' '16' }; % '12'  '16'
+AlgorithmNames={'06'}; %{'01' '02' '04' '05' '07' '10' '14' '16' };% '12' '08' {'01' '02' '04' '05' '07' '08' '10' '14' '16' }; % '12'  '16'
 
 ImageRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';

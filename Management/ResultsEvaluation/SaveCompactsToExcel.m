@@ -5,7 +5,7 @@ javaaddpath('poi_library/xmlbeans-2.3.0.jar');
 javaaddpath('poi_library/dom4j-1.6.1.jar');
 
 
-Reports=dir('Compact*.mat');
+Reports=dir('CompactReport_*.mat');
 OutputFile='CompactReport.xls';
 
 Sheets={'Median', 'Mean', 'KS'};

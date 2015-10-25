@@ -26,11 +26,9 @@ function Report=CreateMaskROCCurveRealWorld(AlgorithmName, ThreshRange)
             NameEnd=Undersc-1;
             NameBase=FileName(1:Undersc-1);
         end
-        disp(NameBase)
         MatFileInd=MatFileInd+1;
         if MatFileInd<=length(MatFileList)
             [FilePath,FileName2,Extension]=fileparts(MatFileList{MatFileInd});
-            disp(FileName2)
         end
         %length(FileName)>=NameEnd
         while MatFileInd<=length(MatFileList) && length(FileName2)==length(FileName) && strcmp(FileName2(1:NameEnd),NameBase)
@@ -40,7 +38,6 @@ function Report=CreateMaskROCCurveRealWorld(AlgorithmName, ThreshRange)
             MatFileInd=MatFileInd+1;
             if MatFileInd<=length(MatFileList)
                 [FilePath,FileName2,Extension]=fileparts(MatFileList{MatFileInd});
-                disp(FileName2)
             end
         end
         
@@ -53,7 +50,6 @@ function Report=CreateMaskROCCurveRealWorld(AlgorithmName, ThreshRange)
                 DiffMean=abs(cell2mat({L.Results(:,OutputMask).MaskMean})-cell2mat({L.Results(:,OutputMask).OutsideMean}));
                 for ThreshInd=1:length(ThreshValues)
                     Thresh=ThreshValues(ThreshInd);
-                    %disp ([sum(abs(cell2mat({L.Results.MaskMedian})-cell2mat({L.Results.OutsideMedian}))>Thresh) RowIndex ThreshInd])
                     Report.Curves(OutputMask,ActualSetInd).MedianPositives(ThreshInd)=sum(DiffMedian>=Thresh);
                     Report.Curves(OutputMask,ActualSetInd).MeanPositives(ThreshInd)=sum(DiffMean>=Thresh);
                     

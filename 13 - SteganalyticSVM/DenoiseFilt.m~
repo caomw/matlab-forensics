@@ -1,0 +1,10 @@
+function DenoisedIm = DenoiseFilt( GrayIm )
+
+    Shift_2=GrayIm(:,4:end);
+    Shift_1=GrayIm(:,3:end-1);
+    Shift_0=GrayIm(:,3:end-2);
+    Shift_M1=GrayIm(:,1:end-3);
+    
+    DenoisedIm=3*Sho
+    
+end

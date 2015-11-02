@@ -1,3 +1,4 @@
+clear all;
 AlgorithmName='12';
 
 Qualities=[0 100 95 85 75 65];

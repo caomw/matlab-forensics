@@ -1,11 +1,13 @@
+clear all;
+
 rng('shuffle');
-Algorithms={'08'} %{'01' '02' '04' '05' '06' '07' '10' '14'};% '08', '12', '16'
+Algorithms={'12'} %{'01' '02' '04' '05' '06' '07' '10' '14'};% '08', '12', '16'
 %HistSteps=[5];
 
 HistSize=500;
 
 load('RandomSamplingStatistics.mat');
-InputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/AlgorithmOutput/';
+InputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
 
 
 for AlgInd=1:length(Algorithms)
@@ -14,12 +16,12 @@ for AlgInd=1:length(Algorithms)
     %HistStep=HistSteps(AlgInd);
     
     %if ~isfield(Statistics,['A' Algorithm]) || ~isfield(Statistics.(['A' Algorithm]),'List')
-    Statistics.(['A' Algorithm]).List=getAllFiles([InputRoot Algorithm],'*.mat',true);
+    %Statistics.(['A' Algorithm]).List=getAllFiles([InputRoot Algorithm],'*.mat',true);
     %end
     
     
         RandomizedIndex=randperm(length(Statistics.(['A' Algorithm]).List));
-        for File=1:1600 %length(RandomizedIndex)
+        for File=1:15000 %length(RandomizedIndex)
             FileInd=RandomizedIndex(File);
             L=load(Statistics.(['A' Algorithm]).List{FileInd});
             pause(0.05);
@@ -95,4 +97,4 @@ for AlgInd=1:length(Algorithms)
 
 end
 
-save('RandomSamplingStatistics.mat','Statistics');
+save('RandomSamplingStatistics_2.mat','Statistics');

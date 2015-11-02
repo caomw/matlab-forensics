@@ -1,18 +1,18 @@
 clear all;
 
-AlgorithmNames={'08'};%{'01' '02' '04' '05' '06' '07' '10' '14' '16' };
+AlgorithmNames={'12'};%{'01' '02' '04' '05' '06' '07' '10' '14' '16' };
 
 ImageRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
-InputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/AlgorithmOutput/';
+InputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
 OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/Evaluations/';
 
 MaskRoot=[ImageRoot 'Masks/'];
 
-Qualities= [0 100 95 85 75 65];
+Qualities=  [0 100 95 85 75 65]; %[0 100 95 85 75 65];
 Rescales=[false];
 
 Datasets=load('../../Datasets_Linux.mat'); %
-DatasetList={'VIPP2', 'Carvalho','ColumbiauUncomp','FirstChallengeTrain','VIPPDempSchaReal', 'VIPPDempSchaSynth'};%  'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList= {'Carvalho','ColumbiauUncomp','FirstChallengeTrain','VIPPDempSchaReal', 'VIPPDempSchaSynth'};%  'VIPP2',  'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
 
 for AlgorithmInd=1:length(AlgorithmNames)
     AlgorithmName=AlgorithmNames{AlgorithmInd};

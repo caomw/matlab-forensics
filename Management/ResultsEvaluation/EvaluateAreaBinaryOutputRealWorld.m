@@ -1,12 +1,12 @@
 clear all;
-MaskLimits=[0 1; 0 1; 0 22; 0 700; 0 0.1];
+MaskLimits=[0 0.2; 1 12];%[0 0.7; 0 1; 0 22; 0 700; 0 0.1];
 %5: 0 55; 6:-0.1 10; 7: 0 6; 10:0 20 16a: 0 0.1 16b: 0.7
 
 ThresholdSteps=100;
 
 %'12'  and '16b' are left hanging
 
-AlgorithmNames={ '02' '08'  '10' '14' '16'}  % '12'  '16' '01' '04' '05' '06' '07' 
+AlgorithmNames={'12' '16'}  % '12'  '16' '01' '04' '05' '06' '07' 
 
 ImageRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
 InputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
@@ -38,7 +38,7 @@ for AlgorithmInd=1:length(AlgorithmNames)
             Names={};
             for InputFile=1:length(FileList)
                 Input=load(FileList{InputFile});
-                ResultMap=GetAlgorithmInputMap(Input,AlgorithmName);
+                ResultMap=GetAlgorithmInputMap2(Input,AlgorithmName);
                 Mask=mean(Mask,3);
                 if isfield(Input,'Name')
                     Names{InputFile}=Input.Name;
@@ -145,7 +145,7 @@ for AlgorithmInd=1:length(AlgorithmNames)
                 end
             end
             
-            save(OutputFile,'Results','Names','Processes','-v7.3');
+            save([OutputFile '_b.mat'],'Results','Names','Processes','-v7.3');
             %disp('saved');
             %pause
         end

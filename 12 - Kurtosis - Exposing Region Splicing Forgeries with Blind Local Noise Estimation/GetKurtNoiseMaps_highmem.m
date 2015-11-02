@@ -17,8 +17,8 @@ function [ estVDCT, estVHaar, estVRand ] = GetKurtNoiseMaps_highmem( im )
     for k = 1:length(sigs)
         estVDCT_tmp=localNoiVarEstimate_highmem(noiIm,'dct',4,sigs(k));
         estVDCT(:,:,k)=imresize(single(estVDCT_tmp),round(size(estVDCT_tmp)/4),'method','box');
-        estVHaar_tmp = localNoiVarEstimate_highmem(noiIm,'haar',4,sigs(k));
-        estVHaar(:,:,k) = imresize(single(estVHaar_tmp),round(size(estVHaar_tmp)/4),'method','box');
+        %estVHaar_tmp = localNoiVarEstimate_highmem(noiIm,'haar',4,sigs(k));
+        %estVHaar(:,:,k) = imresize(single(estVHaar_tmp),round(size(estVHaar_tmp)/4),'method','box');
         %estVRand_tmp=localNoiVarEstimate_highmem(noiIm,'rand',4,sigs(k));
         %estVRand(:,:,k) = imresize(single(estVRand_tmp),round(size(estVRand_tmp)/4),'method','box');
     end

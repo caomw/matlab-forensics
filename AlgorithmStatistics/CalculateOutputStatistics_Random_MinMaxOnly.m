@@ -1,5 +1,5 @@
 rng('shuffle');
-Algorithms={'16'} %{'01' '02' '04' '05' '06' '07' '10' '14'};% '08', '12', '16'
+Algorithms={'12'} %{'01' '02' '04' '05' '06' '07' '10' '14'};% '08', '12', '16'
 %HistSteps=[5];
 
 HistSize=500;
@@ -19,7 +19,7 @@ for AlgInd=1:length(Algorithms)
     
     
         RandomizedIndex=randperm(length(Statistics.(['A' Algorithm]).List));
-        for File=1:10000 %length(RandomizedIndex)
+        for File=1:1000 %length(RandomizedIndex)
             FileInd=RandomizedIndex(File);
             L=load(Statistics.(['A' Algorithm]).List{FileInd});
             pause(0.05);
@@ -51,4 +51,4 @@ for AlgInd=1:length(Algorithms)
 
 end
 
-save('RandomSamplingStatistics_2.mat','Statistics');
+save('RandomSamplingStatistics.mat','Statistics');

@@ -27,12 +27,12 @@ function [ estVDCT, estVHaar, estVRand ] = GetKurtNoiseMaps_lowmem( im )
         clear estVDCT_tmp        
         save('estVDCT.mat','estVDCT');
         clear estVDCT
-        estVHaar_tmp = localNoiVarEstimate_lowmem(noiIm,'haar',4,sigs(k));
-        load('estVHaar.mat');        
-        estVHaar(:,:,k) = imresize(single(estVHaar_tmp),round(size(estVHaar_tmp)/4),'method','box');
-        clear estVHaar_tmp
-        save('estVHaar.mat','estVHaar');
-        clear estVHaar
+        %estVHaar_tmp = localNoiVarEstimate_lowmem(noiIm,'haar',4,sigs(k));
+        %load('estVHaar.mat');        
+        %estVHaar(:,:,k) = imresize(single(estVHaar_tmp),round(size(estVHaar_tmp)/4),'method','box');
+        %clear estVHaar_tmp
+        %save('estVHaar.mat','estVHaar');
+        %clear estVHaar
         %estVRand_tmp=localNoiVarEstimate_lowmem(noiIm,'rand',4,sigs(k));
         %load('estVRand.mat');       
         %estVRand(:,:,k) = imresize(single(estVRand_tmp),round(size(estVRand_tmp)/4),'method','box');

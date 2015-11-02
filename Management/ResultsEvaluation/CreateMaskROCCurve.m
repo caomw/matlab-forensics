@@ -8,7 +8,7 @@ function Report=CreateMaskROCCurve(AlgorithmName, ThreshRange)
     Qualities=[0 100 95 85 75 65];
     Rescales=[false];
     Datasets=load('../../Datasets_Linux.mat');
-    DatasetList={'VIPP2', 'Carvalho','ColumbiauUncomp','FirstChallengeTrain','VIPPDempSchaReal','VIPPDempSchaSynth'}; %, 'FirstChallengeTest2'
+    DatasetList={'VIPP2', 'Carvalho','ColumbiauUncomp','FirstChallengeTrain','VIPPDempSchaReal','VIPPDempSchaSynth'}; %,  'FirstChallengeTest2'
     
     
     Report.ThreshRange=ThreshValues;
@@ -47,11 +47,11 @@ function Report=CreateMaskROCCurve(AlgorithmName, ThreshRange)
                                 Report.Curves{OutputMask,Dataset}.MeanPositives(RowIndex,ThreshInd)=mean(DiffMean>=Thresh);
                                 
                             end
-                            KSThreshValues=0:1/200:1;
+                            KSThreshValues=0:1/800:1;
                             KSList={L.Results(:,OutputMask).KSStat};
                             KSList(cellfun(@isempty,KSList))={repmat(0,[1 length(KSList(cellfun(@isempty,KSList)))])};
                             KSList=cell2mat(KSList);
-                            for ThreshInd=1:201
+                            for ThreshInd=1:801
                                 Thresh=KSThreshValues(ThreshInd);
                                 Report.Curves{OutputMask,Dataset}.KSPositives(RowIndex,ThreshInd)=mean(KSList>=Thresh);
                             end

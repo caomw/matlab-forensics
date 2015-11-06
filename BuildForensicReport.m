@@ -6,11 +6,9 @@ function Report = BuildForensicReport( im, im_jpg )
     [~, Report.F01_JPEG] = Extract_Features( im_jpg );
     cd('../02 - Improved DCT Coefficient Analysis for Forgery Localization in JPEG Images/');
     Report.F02 = getJmap(im_jpg,1,1,15);
-<<<<<<< HEAD
-<<<<<<< HEAD
     cd('../03 - NADetection/');
-    [H1,H2] = minHNA(Loaded.im_jpg);
-    [k1,k2,Q,IPM,DIPM] = detectNA(Loaded.im_jpg,1,4,2.5,false);
+    [H1,H2] = minHNA(im_jpg);
+    [k1,k2,Q,IPM,DIPM] = detectNA(im_jpg,1,4,2.5,false);
     if Q > 0
         GridShift=[mod(9-k1,8) mod(9-k2,8)];
     else
@@ -23,10 +21,6 @@ function Report = BuildForensicReport( im, im_jpg )
     Report.F03_DIPM=DIPM;
     Report.F03_Q=Q;
     
-=======
->>>>>>> 9c91a43a5f9f9606503509c0f3394d63a8a749de
-=======
->>>>>>> origin/master
     cd('../04 - Image Forgery Localization via Fine-Grained Analysis of CFA Artifacts/')
     toCrop=mod(size(im),2);
     imC=im(1:end-toCrop(1),1:end-toCrop(2),:);
@@ -38,20 +32,10 @@ function Report = BuildForensicReport( im, im_jpg )
     Report.F05A = imfilter(sum(LLRmap,3), ones(3), 'symmetric', 'same');
     [LLRmap, ~, ~, k1e, k2e] = getJmapNA_EM(im_jpg, 1, 6);
     Report.F05NA = smooth_unshift(sum(LLRmap,3),k1e,k2e);
-<<<<<<< HEAD
-<<<<<<< HEAD
     cd('../06 - ELA/');
-    Loaded.Report.F06=ELA(Loaded.im,90,20);
+    Report.F06=ELA(im,90,20,false);
     cd('../07 - Using noise inconsistencies for blind image forensics/');
     Report.F07 = GetNoiseMap(im, 8);
-=======
-    cd('../07 - Using noise inconsistencies for blind image forensics/');
-    Report.F07 = GetNoiseMap(im, 8);    
->>>>>>> 9c91a43a5f9f9606503509c0f3394d63a8a749de
-=======
-    cd('../07 - Using noise inconsistencies for blind image forensics/');
-    Report.F07 = GetNoiseMap(im, 8);    
->>>>>>> origin/master
     cd('../08 - Exposing digital forgeries from JPEG ghosts/');
     [~, ~, Report.F08Images, Report.F08MinLocations]=Ghost(im, false, 1);
     cd('../09 - Digital image forgery detection based on lens and sensor aberration/');
@@ -66,13 +50,5 @@ function Report = BuildForensicReport( im, im_jpg )
     Result=CFATamperDetection_Both(im);
     Report.F16F1=Result.F1Map;
     Report.F16F2=Result.F2Map;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     cd('..');
->>>>>>> 9c91a43a5f9f9606503509c0f3394d63a8a749de
-=======
-    cd('..');
->>>>>>> origin/master
 end

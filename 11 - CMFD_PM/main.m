@@ -84,7 +84,7 @@ else
     title(sprintf('output by %s\n this image is pristine', data.feat_name));
 end;
 subplot(2,2,3);
-displayMPF(imread(filename_img),mpf_x,mpf_y,[24,24],data.maskMPF);
+displayMPF(img,mpf_x,mpf_y,[15,15],data.maskMPF);
 title('selected offsets');
 if exist('filename_gt','var'),
     maskGT = imread(filename_gt);

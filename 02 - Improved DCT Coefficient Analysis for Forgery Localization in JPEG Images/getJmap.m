@@ -57,19 +57,8 @@ if isstruct(image)
     varE = var(Edct2);
     
 else
-    image=image(1:floor(size(image,1)/8)*8,1:floor(size(image,2)/8)*8,:);
+    error('Expected JPEG struct as input');
     
-    coeffArray = ExtractYDCT(image);
-    qtable=ExtractQTable(coeffArray);
-    
-    I = ibdct(dequantize(coeffArray, qtable)) + 128;
-    %imshow(uint8(I));
-    %max(max(I))
-    %min(min(I))
-    E = I - double(uint8(I));
-    Edct = 0.299*bdct(E); %0.299 * E(:,:,1) +  0.587 * E(:,:,2) + 0.114 * E(:,:,3));
-    Edct2 = reshape(Edct,1,numel(Edct));
-    varE = var(Edct2);
 end
 
 

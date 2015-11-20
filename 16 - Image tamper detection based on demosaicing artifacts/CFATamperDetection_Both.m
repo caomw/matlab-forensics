@@ -89,8 +89,8 @@ function Result=CFATamperDetection_Both(im,NoiseThresh)
 
     
     ForVarExtraction=double(ForVarExtraction);
-    F2Map=blockproc(ForVarExtraction,[W2-W2Overlap W2-W2Overlap],@getCFAVar,'BorderSize',[W2Overlap W2Overlap],'PadMethod','symmetric','TrimBorder',0,'UseParallel',1);
-    
+    %F2Map=blockproc(ForVarExtraction,[W2-W2Overlap W2-W2Overlap],@getCFAVar,'BorderSize',[W2Overlap W2Overlap],'PadMethod','symmetric','TrimBorder',0,'UseParallel',1);
+    F2Map=0;
     Result.F1Map=F1Map;
     Result.F2Map=F2Map;
     Result.CFAOut=CFAOut;

@@ -44,7 +44,7 @@ param.num_tile = 1; % number of thread
 
 % parameters Post Processing
 param.th2_dist2 = 50*50; % T^2_{D2} = minimum diatance between clones
-param.th2_dlf   = 1200;   % T^2_{\epsion} = threshold on DLF error
+param.th2_dlf   = 300;   % T^2_{\epsion} = threshold on DLF error
 param.th_sizeA  = 1200;  % T_{S} = minimum size of clones
 param.th_sizeB  = 1200;  % T_{S} = minimum size of clones
 param.rd_median = 4;     % \rho_M = radius of median filter
@@ -55,13 +55,14 @@ param.rd_dil    = param.rd_dlf+param.rd_median; % \rho_D = radius for dilatetion
 %% load input
 % some examples of forged images as shown in the experimental section of
 % the paper
-filename_img = '01.jpg'; filename_gt = 'TP_C01_011_gt_ln20.png';
+
+filename_img = 'crowd_fake.jpg'; filename_gt = 'TP_C01_011_gt_ln20.png';
 %filename_img = 'TP_C01_011_copy_ln20.png'; filename_gt = 'TP_C01_011_gt_ln20.png';
 %filename_img = 'TP_C01_039_copy_r45.png'; filename_gt = 'TP_C01_039_gt_r45.png';
 %filename_img = 'TP_C02_011_copy_gj60.png'; filename_gt = 'TP_C02_011_gt_gj60.png';
 %filename_img = 'TP_C02_019_copy_s1145.png'; filename_gt = 'TP_C02_019_gt_s1145.png';
 
-img = imread(['RubenImages/' filename_img]);
+img = imread(['Anastasia/' filename_img]);
 img=imresize(img,0.5);
 
 %% proposed techique
@@ -73,7 +74,7 @@ mpf_x_pre = double(data.cnn(:,:,1));
 mpf_y     = double(data.cnn_end(:,:,2));
 mpf_x     = double(data.cnn_end(:,:,1));
 
-figure();
+figure(1);
 %subplot(2,2,1);
 %imshow(filename_img);
 %title('forged image');
@@ -87,8 +88,8 @@ print(['ImageOutputs/Mask' filename_img],'-dpng');
 %    title(sprintf('output by %s\n this image is pristine', data.feat_name));
 %end;
 %subplot(2,2,3);
-figure;
-displayMPF(imread(['RubenImages/' filename_img]),mpf_x,mpf_y,[24,24],data.maskMPF);
+figure(2);
+displayMPF(img,mpf_x,mpf_y,[15,15],data.maskMPF);
 print(['ImageOutputs/MPF' filename_img],'-dpng');
 %title('selected offsets');
 %if exist('filename_gt','var'),

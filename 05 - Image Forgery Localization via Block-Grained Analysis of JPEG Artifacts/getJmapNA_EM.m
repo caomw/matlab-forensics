@@ -20,7 +20,7 @@ function [LLRmap, LLRmap_s, q1table, k1e, k2e, alphatable] = getJmapNA_EM(image,
 % alphatable: mixture parameter for each DCT frequency
 %
 % Copyright (C) 2012 Signal Processing and Communications Laboratory (LESC),       
-% Dipartimento di Elettronica e Telecomunicazioni - Università di Firenze                        
+% Dipartimento di Elettronica e Telecomunicazioni - Universitï¿½ di Firenze                        
 % via S. Marta 3 - I-50139 - Firenze, Italy                   
 % 
 % This program is free software: you can redistribute it and/or modify
@@ -56,6 +56,7 @@ I = jpeg_rec(image);
 E = I - double(uint8(I));
 Edct = bdct(0.299 * E(:,:,1) +  0.587 * E(:,:,2) + 0.114 * E(:,:,3));
 
+% compute DCT coeffs of decompressed image
 I = ibdct(dequantize(coeffArray, qtable));
 coeff = [1 9 2 3 10 17 25 18 11 4 5 12 19 26 33 41 34 27 20 13 6 7 14 21 28 35 42 49 57 50 43 36 29 22 15 8 16 23 30 37 44 51 58 59 52 45 38 31 24 32 39 46 53 60 61 54 47 40 48 55 62 63 56 64];
 binHist = (-2^11:1:2^11-1);

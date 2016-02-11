@@ -5,14 +5,13 @@ AlgorithmName='05';
 Qualities=[0 100 95 85 75 65];
 Rescales=[false];
 
-Datasets=load('../Datasets_Linux.mat');
-DatasetList={'VIPP2'}; %{'Carvalho','ColumbiauUncomp','FirstChallengeTrain', 'FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+DatasetList={'Carvalho','ColumbiauUncomp','FirstChallengeTrain','VIPPDempSchaReal','VIPPDempSchaSynth'}; %'VIPP2', , 'FirstChallengeTest2',
 
-InputOrigRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
-InputResaveRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved';
-OutputRoot='/media/marzampoglou/New_NTFS_Volume/markzampoglou/ImageForensics/AlgorithmOutput/';
-MaskRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Masks/';
-load('../Datasets_Linux.mat');
+InputOrigRoot='/media/marzampoglou/3TB_B/Image Forensics/Datasets/';
+InputResaveRoot='/media/marzampoglou/3TB_B/Image Forensics/Datasets/Resaved/';
+OutputRoot='/media/marzampoglou/3TB_A/AlgorithmOutput/';
+MaskRoot='/media/marzampoglou/3TB_B/Image Forensics/Datasets/Masks/';
+load('../Datasets_Independent.mat');
 
 c2 = 6;
 
@@ -33,9 +32,9 @@ for Quality=Qualities
             end
             for subfolder=1:length(InputPaths);
                 if Quality==0 && Rescale==false
-                    InputPath=InputPaths{subfolder};
+                    InputPath=[InputOrigRoot InputPaths{subfolder} '/'];
                 else
-                    InputPath=strrep(InputPaths{subfolder}, InputOrigRoot, [InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/']);
+                    InputPath=[InputResaveRoot num2str(Quality) '_' num2str(Rescale) '/' InputPaths{subfolder} '/'];
                 end
                 FileList={};
                 for fileExtension={'*.jpg','*.jpeg'}
@@ -47,7 +46,7 @@ for Quality=Qualities
                     if Quality==0 && Rescale==0
                         OutputName=[strrep(FileList{fileInd},InputOrigRoot,[OutputRoot AlgorithmName '/0_0/']) '.mat'];
                     else
-                        OutputName=[strrep(FileList{fileInd},InputResaveRoot,[OutputRoot AlgorithmName]) '.mat'];
+                        OutputName=[strrep(FileList{fileInd},InputResaveRoot,[OutputRoot AlgorithmName '/']) '.mat'];
                     end
                     
                     if ~exist(OutputName)
@@ -59,30 +58,34 @@ for Quality=Qualities
                         
                         
                         im=jpeg_read(FileList{fileInd});
-                        [LLRmap, LLRmap_s, q1table, alphat] = getJmap_EM(im, 1, c2);
-                        map_final = imfilter(sum(LLRmap,3), ones(3), 'symmetric', 'same');
-                        
+                       % [LLRmap, LLRmap_s, q1table, alphat] = getJmap_EM(im, 1, c2);
+                       % map_final = imfilter(sum(LLRmap,3), ones(3), 'symmetric', 'same');
+                       % 
+                       % 
+                       % Result{1,1}=LLRmap;
+                       % Result{2,1}=LLRmap_s;
+                       % Result{3,1}=q1table;
+                       % Result{4,1}=alphat;
+                       % Result{5,1}=map_final;
+
                         [LLRmap, LLRmap_s, q1table, k1e, k2e, alphat] = getJmapNA_EM(im, 1, c2);
                         map_final = imfilter(sum(LLRmap,3), ones(3), 'symmetric', 'same');
                         
-                        
-                        Result{1,1}=LLRmap;
-                        Result{2,1}=LLRmap_s;
-                        Result{3,1}=q1table;
-                        Result{4,1}=alphat;
-                        Result{5,1}=map_final;
                         Result{1,2}=LLRmap;
                         Result{2,2}=LLRmap_s;
                         Result{3,2}=q1table;
                         Result{4,2}=alphat;
                         Result{5,2}=map_final;
+                        
                         Ks{1}=k1e;
                         Ks{2}=k2e;
                         
-                        Name=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'],'');
+                        Name=strrep(FileList{fileInd},[InputResaveRoot num2str(Quality) '_' num2str(Rescale) '/'],'');
                         Name=strrep(Name,InputOrigRoot,'');
-                        MaskFile=strrep(FileList{fileInd},[InputResaveRoot '/' num2str(Quality) '_' num2str(Rescale) '/'], MaskRoot);
-                        MaskFile=strrep(MaskFile,InputOrigRoot, MaskRoot);
+                        MaskFile=[MaskRoot Name];
+                        if Quality~=0 || Rescale~=false
+                            MaskFile=MaskFile(1:end-4);
+                        end
                         maskdots=strfind(MaskFile,'.');
                         MaskFile=strrep(MaskFile,MaskFile(maskdots(end):end),'.png');
                         if exist(MaskFile,'file')

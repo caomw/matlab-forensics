@@ -1,11 +1,12 @@
-Datasets=load('../Datasets_Linux.mat');
-DatasetList={'VIPP2'}; %{'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain','FirstChallengeTest','FirstChallengeTest2','VIPPDempSchaReal','VIPPDempSchaSynth'};
+clear all;
+load('../Datasets_Independent.mat');
+DatasetList={'Carvalho', 'ColumbiauUncomp','FirstChallengeTrain','VIPPDempSchaReal','VIPPDempSchaSynth'}; %,'FirstChallengeTest','FirstChallengeTest2' 'VIPP2', 
 
-InputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/';
-OutputRoot='/media/marzampoglou/3TB/markzampoglou/ImageForensics/Datasets/Resaved/';
+InputRoot='/media/marzampoglou/3TB_B/Image Forensics/Datasets/';
+OutputRoot='/media/marzampoglou/3TB_B/Image Forensics/Datasets/Resaved/';
 
-Qualities=[75 100]; %[65 75 85 95 100];
-Resizes=[true];
+Qualities=[65 75 85 95 100];
+Resizes=[false];
 
 for Dataset=1:length(DatasetList)
     InputSet=DatasetList{Dataset};
@@ -23,7 +24,7 @@ for Dataset=1:length(DatasetList)
     for subfolder=1:length(InputPaths);
         FileList={};
         for fileExtension={'*.jpg','*.jpeg','*.png','*.gif','*.tif','*.bmp'}
-            FileList=[FileList;getAllFiles(InputPaths{subfolder},fileExtension{1},true)];
+            FileList=[FileList;getAllFiles([InputRoot InputPaths{subfolder}],fileExtension{1},true)];
         end
         for fileInd=1:length(FileList)
             ImageIn=CleanUpImage(FileList{fileInd});

@@ -2,7 +2,7 @@ clear all;
 
 AlgorithmName='05';
 
-Datasets=load('../Datasets_Linux.mat');
+Datasets=load('../Datasets_Independent.mat');
 
 c2 = 6;
 
@@ -38,15 +38,16 @@ for Folder=1:length(Folders)
                 [LLRmap, LLRmap_s, q1table, alphat] = getJmap_EM(im, 1, c2);
                 map_final = imfilter(sum(LLRmap,3), ones(3), 'symmetric', 'same');
                 
-                [LLRmap, LLRmap_s, q1table, k1e, k2e, alphat] = getJmapNA_EM(im, 1, c2);
-                map_final = imfilter(sum(LLRmap,3), ones(3), 'symmetric', 'same');
-                
                 
                 Result{1,1}=LLRmap;
                 Result{2,1}=LLRmap_s;
                 Result{3,1}=q1table;
                 Result{4,1}=alphat;
                 Result{5,1}=map_final;
+
+                [LLRmap, LLRmap_s, q1table, k1e, k2e, alphat] = getJmapNA_EM(im, 1, c2);
+                map_final = imfilter(sum(LLRmap,3), ones(3), 'symmetric', 'same');
+                
                 Result{1,2}=LLRmap;
                 Result{2,2}=LLRmap_s;
                 Result{3,2}=q1table;
